@@ -1,0 +1,77 @@
+\begin{frame}
+	\frametitle{RGPD: Proceso de autorización}
+	Se establecerá un proceso formal de autorizaciones que cubra todos los elementos del sistema de información (todas las categorías):
+	
+\begin{itemize}
+	\item 	\textbf{Utilización de instalaciones, habituales y alternativas.}
+	\item 	\textbf{Entrada de equipos en producción, en particular, equipos que involucren criptografía.}
+	\item 	\textbf{Entrada de aplicaciones en producción.}
+	\item 	\textbf{Establecimiento de enlaces de comunicaciones con otros sistemas.}
+	\item 	Utilización de medios de comunicación, habituales y alternativos.
+	\item 	Utilización de soportes de información.
+	\item 	Utilización de equipos móviles. Se entenderá por equipos móviles ordenadores portátiles, PDA, u otros de naturaleza análoga.
+	\item 	\textbf{Utilización de servicios de terceros, bajo contrato o Convenio.}
+\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{RGPD: Dimensionamiento / gestión de capacidades}
+	Con carácter previo a la puesta en explotación, se realizará un estudio previo que cubrirá los siguientes aspectos (nivel medio):
+	\begin{itemize}
+	\item Necesidades de procesamiento.
+	\item 	Necesidades de almacenamiento de información: durante su procesamiento y durante el periodo que deba retenerse.
+	\item 	Necesidades de comunicación.
+	\item 	Necesidades de personal: cantidad y cualificación profesional.
+	\item 	Necesidades de instalaciones y medios auxiliares.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{RGPD: Componentes certificados}
+	Con carácter previo a la puesta en explotación, se realizará un estudio previo que cubrirá los siguientes aspectos (nivel medio):
+	\begin{itemize}
+		\item Necesidades de procesamiento.
+		\item 	Necesidades de almacenamiento de información: durante su procesamiento y durante el periodo que deba retenerse.
+		\item 	Necesidades de comunicación.
+		\item 	Necesidades de personal: cantidad y cualificación profesional.
+		\item 	Necesidades de instalaciones y medios auxiliares.
+	\end{itemize}
+	\begin{alertblock}{Certificación de bases de datos}
+		Aún no hay sistemas de gestión de bases de datos certificados.\footnote{\href{https://oc.ccn.cni.es/}{https://oc.ccn.cni.es/}}
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{RGPD: Control de acceso}
+
+
+El control de acceso cubre el conjunto de actividades preparatorias y ejecutivas para que una determinada entidad, usuario o proceso, pueda, o no, acceder a un recurso del sistema para realizar una determinada acción.\\~\\
+
+El control de acceso que se implante en un sistema real será un punto de equilibrio entre la comodidad de uso y la protección de la información. En sistemas de nivel Bajo, se primará la comodidad, mientras que en sistemas de nivel Alto se primará la protección.
+
+\end{frame}
+\begin{frame}
+	\frametitle{RGPD: Control de acceso}
+
+En todo control de acceso se requerirá lo siguiente:
+
+\begin{itemize}
+	\item Que todo acceso esté prohibido, salvo concesión expresa.
+	\item Que la entidad quede identificada singularmente [op.acc.1].
+	\item Que la utilización de los recursos esté protegida [op.acc.2].
+	\item Que se definan para cada entidad los siguientes parámetros: a qué se necesita acceder, con qué derechos y bajo qué autorización [op.acc.4].
+	\item Serán diferentes las personas que autorizan, usan y controlan el uso [op.acc.3].
+	\item Que la identidad de la entidad quede suficientemente autenticada [op.acc.5].
+	\item Que se controle tanto el acceso local ([op.acc.6]) como el acceso remoto ([op.acc.7]).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{RGPD: Control de acceso}
+Con el cumplimiento de todas las medidas indicadas se garantizará que nadie accederá a recursos sin autorización. Además, quedará registrado el uso del sistema ([op.exp.8]) para poder detectar y reaccionar a cualquier fallo accidental o deliberado.\\~\\
+
+Cuando se interconecten sistemas en los que la identificación, autenticación y autorización tengan lugar en diferentes dominios de seguridad, bajo distintas responsabilidades, en los casos en que sea necesario, las medidas de seguridad locales se acompañarán de los correspondientes acuerdos de colaboración que delimiten mecanismos y procedimientos para la atribución y ejercicio efectivos de las responsabilidades de cada sistema ([op.ext]).
+	
+\end{frame}

@@ -1,0 +1,10 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Definici\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Arquitectura}{4}{0}{2}
+\beamer@sectionintoc {3}{Categorizaci\'on}{10}{0}{3}
+\beamer@sectionintoc {4}{Seguridad en SGBDs}{18}{0}{4}
+\beamer@sectionintoc {5}{Caso de uso: MySQL}{19}{0}{5}
+\beamer@subsectionintoc {5}{1}{Instalaci\'on}{19}{0}{5}
+\beamer@subsectionintoc {5}{2}{Seguridad}{27}{0}{5}
+\beamer@subsectionintoc {5}{3}{Securizaci\'on}{30}{0}{5}
+\beamer@subsectionintoc {5}{4}{Conexiones seguras}{34}{0}{5}

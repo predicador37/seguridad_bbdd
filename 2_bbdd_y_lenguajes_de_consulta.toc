@@ -1,0 +1,4 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Definici\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Arquitectura}{4}{0}{2}
+\beamer@sectionintoc {3}{Categorizaci\'on}{10}{0}{3}

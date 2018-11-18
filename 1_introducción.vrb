@@ -1,0 +1,15 @@
+\frametitle{Ejercicio 1.2}
+	Dado el siguiente código para un entorno Python/MySQL:
+	\begin{exampleblock}{Ejecución de SQL desde Python}
+		\begin{verbatim}
+		cmd = "update people set name='{0}'
+		       where id='{1}'".format(name, id)
+		cursor.execute(cmd)
+		\end{verbatim}
+	\end{exampleblock}
+Indique si está afectado por la vulnerabilidad de inyección SQL y, de ser así, proponga una alternativa segura.
+\begin{alertblock}{Ayuda}
+	\href{https://dev.mysql.com/doc/connector-python/en/connector-python-api-mysqlcursor-execute.html}{Documentación sobre la clase MySQLCursor}
+
+	\href{https://docs.python.org/3/library/stdtypes.html#str.format}{Documentación sobre el método format}
+\end{alertblock}

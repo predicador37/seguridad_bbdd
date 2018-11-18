@@ -1,0 +1,2 @@
+\frametitle{Ejercicio 2.5: conexión segura desde Python}
+	Crear un pequeño script en Python que, usando el paquete \mintinline{python}{MySQLdb}, utilice los certificados de cliente para conectarse a la base de datos y ejecutar el comando \mintinline{sql}{"SHOW STATUS LIKE 'Ssl_cipher'"}, cuyo resultado deberá mostrar por consola.
