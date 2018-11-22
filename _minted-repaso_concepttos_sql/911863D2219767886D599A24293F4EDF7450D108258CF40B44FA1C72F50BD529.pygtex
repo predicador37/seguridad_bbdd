@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+CREATE [OR REPLACE] \PYGZob{}DATABASE | SCHEMA\PYGZcb{} [IF NOT EXISTS] db\PYGZus{}name
+DROP \PYGZob{}DATABASE | SCHEMA\PYGZcb{} [IF EXISTS] db\PYGZus{}name\PYGZcb{}
+CREATE [OR REPLACE] [TEMPORARY] TABLE [IF NOT EXISTS] tbl\PYGZus{}name
+\end{Verbatim}
