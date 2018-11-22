@@ -19,62 +19,62 @@
 
 
 \mode<presentation> {
-
-% The Beamer class comes with a number of default slide themes
-% which change the colors and layouts of slides. Below this is a list
-% of all the themes, uncomment each in turn to see what they look like.
-
-%\usetheme{default}
-%\usetheme{AnnArbor}
-%\usetheme{Antibes}
-%\usetheme{Bergen}
-%\usetheme{Berkeley}
-%\usetheme{Berlin}
-%\usetheme{Boadilla}
-%\usetheme{CambridgeUS}
-%\usetheme{Copenhagen}
-%\usetheme{Darmstadt}
-%\usetheme{Dresden}
-%\usetheme{Frankfurt}
-%\usetheme{Goettingen}
-%\usetheme{Hannover}
-%\usetheme{Ilmenau}
-%\usetheme{JuanLesPins}
-%\usetheme{Luebeck}
-%\usetheme{Madrid}
-%\usetheme{Malmoe}
-%\usetheme{Marburg}
-%\usetheme{Montpellier}
-%\usetheme{PaloAlto}
-%\usetheme{Pittsburgh}
-\usetheme{Rochester}
-%\usetheme{Singapore}
-%\usetheme{Szeged}
-%\usetheme{Warsaw}
-
-% As well as themes, the Beamer class has a number of color themes
-% for any slide theme. Uncomment each of these in turn to see how it
-% changes the colors of your current slide theme.
-
-%\usecolortheme{albatross}
-%\usecolortheme{beaver}
-%\usecolortheme{beetle}
-%\usecolortheme{crane}
-%\usecolortheme{dolphin}
-%\usecolortheme{dove}
-%\usecolortheme{fly}
-%\usecolortheme{lily}
-%\usecolortheme{orchid}
-%\usecolortheme{rose}
-%\usecolortheme{seagull}
-%\usecolortheme{seahorse}
-%\usecolortheme{whale}
-%\usecolortheme{wolverine}
-
-%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
-%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
-
-%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+	
+	% The Beamer class comes with a number of default slide themes
+	% which change the colors and layouts of slides. Below this is a list
+	% of all the themes, uncomment each in turn to see what they look like.
+	
+	%\usetheme{default}
+	%\usetheme{AnnArbor}
+	%\usetheme{Antibes}
+	%\usetheme{Bergen}
+	%\usetheme{Berkeley}
+	%\usetheme{Berlin}
+	%\usetheme{Boadilla}
+	%\usetheme{CambridgeUS}
+	%\usetheme{Copenhagen}
+	%\usetheme{Darmstadt}
+	%\usetheme{Dresden}
+	%\usetheme{Frankfurt}
+	%\usetheme{Goettingen}
+	%\usetheme{Hannover}
+	%\usetheme{Ilmenau}
+	%\usetheme{JuanLesPins}
+	%\usetheme{Luebeck}
+	%\usetheme{Madrid}
+	%\usetheme{Malmoe}
+	%\usetheme{Marburg}
+	%\usetheme{Montpellier}
+	%\usetheme{PaloAlto}
+	%\usetheme{Pittsburgh}
+	\usetheme{Rochester}
+	%\usetheme{Singapore}
+	%\usetheme{Szeged}
+	%\usetheme{Warsaw}
+	
+	% As well as themes, the Beamer class has a number of color themes
+	% for any slide theme. Uncomment each of these in turn to see how it
+	% changes the colors of your current slide theme.
+	
+	%\usecolortheme{albatross}
+	%\usecolortheme{beaver}
+	%\usecolortheme{beetle}
+	%\usecolortheme{crane}
+	%\usecolortheme{dolphin}
+	%\usecolortheme{dove}
+	%\usecolortheme{fly}
+	%\usecolortheme{lily}
+	%\usecolortheme{orchid}
+	%\usecolortheme{rose}
+	%\usecolortheme{seagull}
+	%\usecolortheme{seahorse}
+	%\usecolortheme{whale}
+	%\usecolortheme{wolverine}
+	
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	
+	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 
 \usepackage{graphicx} % Allows including images
@@ -83,6 +83,7 @@
 \usepackage[spanish]{babel}
 \usepackage{svg}
 \usepackage{caption}
+\usepackage{minted}
 \captionsetup{font=scriptsize,labelfont=scriptsize}
 \setbeamerfont{footnote}{size=\tiny}
 \hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
@@ -93,14 +94,14 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Short title]{Certificación y controles de seguridad en Bases de Datos: SQL} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Short title]{Certificación y controles de seguridad en Bases de Datos: Sistemas de gestión de bases de datos} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Miguel Expósito Martín} % Your name
 \institute[UNICAN] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
 {
-Universidad de Cantabria \\ % Your institution for the title page
-\medskip
-\textit{miguel.exposito@unican.es} % Your email address
+	Universidad de Cantabria \\ % Your institution for the title page
+	\medskip
+	\textit{miguel.exposito@unican.es} % Your email address
 }
 \date{26/11/2018} % Date, can be changed to a custom date
 
@@ -112,15 +113,15 @@ Universidad de Cantabria \\ % Your institution for the title page
 }
 
 \begin{document}
-
-\begin{frame}
-\titlepage % Print the title page as the first slide
-\end{frame}
-
-\begin{frame}
-\frametitle{Visión general} % Table of contents slide, comment this block out to remove it
-\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
-\end{frame}
+	
+	\begin{frame}
+		\titlepage % Print the title page as the first slide
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Visión general} % Table of contents slide, comment this block out to remove it
+		\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+	\end{frame}
 
 %----------------------------------------------------------------------------------------
 %	PRESENTATION SLIDES
@@ -145,205 +146,168 @@ Structured Query Language, o SQL, es el lenguaje utilizado tanto para la definic
 
 \end{frame}
 
-\section{Conceptos clave} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+\section{SQL básico} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
 
 \begin{frame}
-	\frametitle{Creación de esquemas}
-\begin{figure}
-	\includegraphics[width=0.85\linewidth]{arch_dbms}
-	\caption{Arquitectura de SGBDs.\footnote{Fuente: \cite{p2}}}
-\end{figure}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Arquitectura: gestor de conexiones y seguridad}
+	\frametitle{Comandos administrativos}
 	\begin{itemize}
-		\item Proporciona facilidades para iniciar una conexión (remota) a una base de datos.
-		\item Verifica credenciales de inicio de sesión (usuario/contraseña) y devuelve un manejador de conexión.
-		\item Verifica si un usuario tiene los privilegios suficientes para ejecutar las acciones requeridas.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Arquitectura: compilador de DDL}
-	\begin{itemize}
-		\item Compila las definiciones de datos especificadas en DDL(\textit{Data Definition Language})
-		\item Parsea las definiciones de DDL, comprueba su corrección sintáctica y lo traduce a un formato interno.
-		\item Una vez compilado con éxito, se registran las definiciones de datos en el catálogo.
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Arquitectura: procesador de consultas}
-	
-		Una de las partes más importantes de un SGBD, asiste en la ejecución de consultas a la base de datos tales como recuperación, inserción, actualización o borrado de información. Generalmente consta de los siguientes componentes:
-		\begin{itemize}
-			\item Compilador DML (\textit{Data Manipulation Language}): compila las sentencias de manipulación de datos. SQL es un DML declarativo.
-			\item Procesador de consultas: parsea la consulta a un formato de representación interno. Puede reescribir la consulta para optimizarla independientemente del estado de la BD, utilizando un conjunto de reglas predefinidas específicas del SGBD.
-			\item Optimizador de consultas: optimiza la consulta en función del estado de la BD, evaluando los distintos planes de ejecución. Estas estimaciones se llevan a cabo utilizando el catálogo y procedimientos de inferencia estadística.
-			\item Ejecutor de consultas: se encarga de la ejecución de la consulta devuelta por el optimizador recuperando los datos solicitados desde el gestor de almacenamiento.
-	\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Arquitectura: procesador de consultas}
-	
-	\begin{itemize}
-		\item Gestor de almacenamiento: gobierna el acceso físico a los archivos y supervisa el correcto almacenamiento de datos. Consta de:
-		\begin{itemize}
-		\item Gestor de transacciones: supervisa la ejecución de transacciones, creando una planificación con operaciones de lectura y escritura mejorando la eficiencia y rendimiento globales y garantizando atomicidad, consistencia, aislamiento y durabilidad (ACID).
-		\item Gestor de buffer: gestiona la memoria de buffer del SGBD. Es responsable de su cacheo y monitorización.
-		\item Gestor de bloqueos: juega un importante papel en el control de concurrencia, asegurando la integridad de los datos en todo momento. Evita conflictos entre transacciones previniendo actualizaciones simultáneas sobre un mismo elemento de datos.
-		\item Gestor de recuperación: recoge todas las operaciones de base de datos en un fichero de histórico, pudiendo ser utilizado para deshacer acciones o transacciones abortadas, así como para recuperación de caídas.
-\end{itemize}
-	\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Arquitectura: utilidades e interfaces}
-	
-	\begin{itemize}
-		\item Un SGBD cuenta con diversas utilidades:
-			\begin{itemize}
-			\item Utilidad de carga: soporta la importación de datos en la BD desde diferentes fuentes.
-			\item Utilidad de reorganización: reorganiza automáticamente la BD para mejorar su rendimiento.
-			\item Utilidades de monitorización: tiempos de respuesta, espacio de almacenamiento, etc.
-			\item Utilidades de gestión de usuarios: usuarios, roles y privilegios.
-			\item Utilidades de copia de seguridad y recuperación.
-		\end{itemize}
-	\item Un SGBD necesita interactuar con diversos actores: diseñadores, administradores, aplicaciones, usuarios finales... Para facilitar dicha comunicación, se proporcionan varios interfaces de usuario (web, línea de comandos, GUI de escritorio, etc.). Ejemplo: \href{https://www.mysql.com/products/workbench/}{MySQL Workbench}.
-	\end{itemize}
-\end{frame}
-\section{Categorización} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
-\begin{frame}
-	\frametitle{Categorización}
-	
-	\begin{itemize}
-		\item Basada en el modelo de datos
-	\begin{itemize}
-	\item 	Jerárquica: modelo basado en árbol. Procedural y orientada a registro. No tiene procesador de consultas. Ejemplo: el registro de \textit{Windows}.
-	\item 		De red: modelo basado en red, más flexible que el jerárquico.  Procedural y orientada a registro, tampoco tiene procesador de consultas. CODASYL es uno de los tipos de BD jerárquica más populares.
-	\item 		Relacional: utiliza el modelo relacional, el más usado en la industria.SQL se utiliza tanto para DML como para DDL. Es declarativo y orientado a conjuntos. Sí tiene procesador de consultas y presenta separación entre modelo lógico y de datos internos. Ejemplos: \textit{Oracle, MySQL, SQL Server...}
-\end{itemize}
-\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Categorización}
-	\begin{itemize}
-		\item Basada en el modelo de datos
-	\begin{itemize}
-	\item 		Orientada a objetos: basada en el modelo del mismo nombre. Ejemplo: \textit{db4o}. No son muy populares en la industria debido a su complejidad.
-	\item 		Relacional extendida: utiliza el modelo relacional extendido con conceptos de orientación a objetos. La mayor parte de las BBDD relacionales incorporan este tipo de extensiones.
-	\item 		XML: utiliza el modelo XML para almacenar datos. Las BBDD relacionales también incorporan extensiones para XML. Ejemplo: \textit{eXist}.
-	\item 		NoSQL (documentos, grafos): almacenes clave-valor, de documentos (JSON), de grafos (RDF)... Ejemplos: \textit{MongoDB, Neo4j}.
-\end{itemize}
-		\item Basada en el grado de acceso simultáneo
-\begin{itemize}
-	\item 	Monousuario: solo un usuario a la vez. Ej: \textit{MS Access}.
-	\item 	Multiusuario: múltiples usuarios interactuando simultáneamente. 
-\end{itemize}
-\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Categorización}
-	\begin{itemize}
-		\item Basada en la arquitectura
-	\begin{itemize}
-	\item 	Centralizada: mainframes que procesan todas las consultas en un único host.
-	\item 		Cliente-servidor: clientes activos solicitan servicios a servidores pasivos.
-	\item 		N-capas: GUI + servidor de aplicaciones + BD.
-	\item 		En la nube: alojada por terceros, pueden distribuir los datos entre múltiples máquinas. Ej: \textit{Cassandra}.
-	\item 		Federada: proporciona una interfaz uniforme a múltiples fuentes de datos subyacentes.
-	\item 		En memoria: almacena los datos en memoria. Se utilizan para propósitos de tiempo real.
-\end{itemize}
-	\end{itemize}
-\end{frame}
-\begin{frame}
-	\frametitle{Categorización}
-		\begin{itemize}
-		\item Basada en el tipo de uso
-	\begin{itemize}
-	\item 	Transaccional (OLTP): enfocada en gestión operacional o transaccional (ej: TPV). Deben tener buen soporte para grandes volúmenes de consultas pequeñas.
-	\item 		Analítica (OLAP): enfocada en utilizar datos operativos con enfoques tácticos o estratégicos. En este paragidma, un número limitado de usuarios lanza consultas complejas para analizar altos volúmenes de datos.
-	\item 		Multimedia: permite almacenar datos en forma de texto, imágenes, audio, vídeo...Proporcionan motores de consulta basados en el contenido.
-	\item 		Espacial: soporta el almacenamiento y consulta de datos espaciales. Es la base de los GIS. Ej: PostgreSQL.
-	\item 		Móvil: se ejecuta sobre \textit{smartphones}. Presenta una baja huella de memoria, ideal para potencia de cálculo limitada. Ejemplos: \textit{SQLite, Oracle Lite, SQL Server Compact,} etc.
-\end{itemize}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Ejercicio 2.1: seleccione la respuesta correcta}
-	\begin{enumerate}
-	\item ¿Cuál de los siguientes componentes \textbf{no es parte} del gestor de almacenamiento en una arquitectura de SGBD?
-	
-\begin{enumerate}[a.]
-	\item Gestor de conexiones
-	\item Gestor de transacciones
-	\item Gestor de buffer
-	\item Gestor de recuperación
-\end{enumerate}
-\vfill
-\item	CODASYL es un ejemplo de...
-\begin{enumerate}[a.]
-	\item SGBD jerárquico
-	\item SGBD en red
-	\item SGBD relacional
-	\item SGBD orientado a objetos
-\end{enumerate}
-\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Ejercicio 2.1: seleccione la respuesta correcta}
-	\begin{enumerate}
-		\setcounter{enumi}{2}
-		\item ¿Cuál de los siguientes tipos de SGBD \textbf{no pertenece} a una clasificación basada en modelo de datos?
 		
-		\begin{enumerate}[a.]
-			\item SGBD jerárquico
-			\item SGBD en red
-			\item SGBD en la nube
-			\item SGBD objeto-relacional
-		\end{enumerate}
-		\vfill
-		\item Si necesita utilizar una arquitectura de SGBD que permita el acceso a múltiples fuentes de datos y proporcione una interfaz uniforme que oculte los detalles de bajo nivel, el SGBD más apropiado sería...
-		\begin{enumerate}[a.]
-			\item SGBD de n-capas
-			\item SGBD en la nube
-			\item SGBD cliente-servidor
-			\item SGBD federado
-		\end{enumerate}
-	\end{enumerate}
-\end{frame}
-
-\begin{frame}
-	\frametitle{Ejercicio 2.1: seleccione la respuesta correcta}
-	\begin{enumerate}
-			\setcounter{enumi}{4}
-		\item ¿Qué afirmación \textbf{no es correcta}?
+		\item \mintinline{sql}{USE [database name]}: establece la base de datos actual.
+		\item \mintinline{sql}{SHOW DATABASES}: muestra las bases de datos existentes.	
+		\item \mintinline{sql}{SHOW TABLES}: muestra todas las tablas no temporales.
+		\item \mintinline{sql}{SHOW COLUMNS FROM [table name]}: proporciona información sobre las columnas de una determinada tabla.
+		\item \mintinline{sql}{SHOW INDEX FROM TABLENAME [table name]}: proporciona información sobre los índices de una determinada tabla.
+		\item \mintinline{sql}{SHOW TABLE STATUS LIKE [table name]\G}: proporciona más información sobre tablas no temporales utilizando el patrón después del LIKE.
 		
-		\begin{enumerate}[a.]
-			\item Un SGBD relacional presenta una separación completa entre el modelo de datos interno y el lógico. 
-			\item Una arquitectura de SGBD en la nube es aconsejable para empresas pequeñas.
-			\item El procesador/re-escritor de consultas optimiza una consulta basándose en el estado actual de la BD.
-			\item Un SGBD en memoria almacena todos los datos en la memoria interna en lugar de utilizar almacenamiento externo más lento, como el basado en disco.
-		\end{enumerate}
-	
-	\end{enumerate}
+	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\frametitle{Ejercicio 2.1: seleccione la respuesta correcta}
-		\begin{enumerate}
-	\setcounter{enumi}{5}
-		\item ¿Qué afirmación \textbf{es correcta}?
-	\begin{enumerate}[a.]
-		\item El compilador de DDL procesa sentencias DDL, comprueba su corrección semántica, las traslada a un formato interno y registra las definiciones de datos en el catálogo.
-		\item El procesador/re-escritor de consultas optimiza las consultas basándose en el estado actual de la base de datos.
-		\item Un SGBD OLTP se utiliza principalmente para toma de decisiones estratégicas y tácticas.
-		\item Un SGBD con capacidades XML permite almacenar datos en este formato; sin embargo, no permite lanzarle consultas.
-	\end{enumerate}
-	\end{enumerate}
+
+
+\begin{frame}[fragile]
+	\frametitle{DDL}
+\setbeamerfont{block body}{size=\small}
+
+\begin{block}{Creación de bases de datos y tablas}
+	\begin{minted}{text}
+CREATE [OR REPLACE] {DATABASE | SCHEMA} [IF NOT EXISTS] db_name
+DROP {DATABASE | SCHEMA} [IF EXISTS] db_name}
+CREATE [OR REPLACE] [TEMPORARY] TABLE [IF NOT EXISTS] tbl_name
+	\end{minted}
+\end{block}
+
+
+\begin{exampleblock}{Ejemplos}
+	\begin{verbatim}
+	CREATE DATABASE db1;
+	DROP DATABASE db1;
+	create table if not exists test (
+	id bigint auto_increment primary key,
+	name varchar(128) charset utf8,
+	key name (name(32))
+	) engine=InnoDB default charset latin1;
+	\end{verbatim}
+\end{exampleblock}
+
+
 \end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{DDL}
+	\setbeamerfont{block body}{size=\small}
+	
+	\begin{block}{Modificación y borrado de tablas}
+		\begin{minted}{text}
+ALTER [ONLINE] [IGNORE] TABLE tbl_name
+[WAIT n | NOWAIT]
+alter_specification [, alter_specification] ...
+
+DROP [TEMPORARY] TABLE [IF EXISTS] [/*COMMENT TO SAVE*/]
+tbl_name [, tbl_name] ...
+[WAIT n|NOWAIT]
+[RESTRICT | CASCADE]
+		\end{minted}
+	\end{block}
+	
+	
+	\begin{exampleblock}{Ejemplos}
+		\begin{verbatim}
+		ALTER TABLE t1 ADD x INT;
+		ALTER TABLE t1 DROP x;
+		DROP TABLE Employees, Customers;
+		\end{verbatim}
+	\end{exampleblock}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{DML}
+	\setbeamerfont{block body}{size=\small}
+	
+	\begin{block}{Consulta de tablas}
+		\begin{minted}{text}
+SELECT
+[ALL | DISTINCT | DISTINCTROW]
+[HIGH_PRIORITY]
+[STRAIGHT_JOIN]
+[SQL_SMALL_RESULT] [SQL_BIG_RESULT] [SQL_BUFFER_RESULT]
+[SQL_CACHE | SQL_NO_CACHE] [SQL_CALC_FOUND_ROWS]
+select_expr [, select_expr ...]
+[ FROM table_references
+[WHERE where_condition]
+[GROUP BY {col_name | expr | position} [ASC | DESC], ... ]
+[HAVING where_condition]
+[ORDER BY {col_name | expr | position} [ASC | DESC], ...]
+[LIMIT {[offset,] row_count | row_count OFFSET offset}]
+[PROCEDURE procedure_name(argument_list)]
+[INTO OUTFILE 'file_name' [CHARACTER SET charset_name]
+		\end{minted}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{DML}
+	\setbeamerfont{block body}{size=\small}
+
+	\begin{block}{Inserción de datos en tablas}
+		\begin{verbatim}
+		INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
+		[INTO] tbl_name [PARTITION (partition_list)] [(col,...)]
+		{VALUES | VALUE} ({expr | DEFAULT},...),(...),...
+		[ ON DUPLICATE KEY UPDATE
+		col=expr [, col=expr] ... ]
+		\end{verbatim}
+	\end{block}
+	\begin{block}{Actualización de datos en tablas}
+	\begin{verbatim}
+	INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
+	[INTO] tbl_name [PARTITION (partition_list)] [(col,...)]
+	{VALUES | VALUE} ({expr | DEFAULT},...),(...),...
+	[ ON DUPLICATE KEY UPDATE
+	col=expr
+	[, col=expr] ... ]
+	\end{verbatim}
+\end{block}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{DML}
+	\setbeamerfont{block body}{size=\small}
+	
+	\begin{block}{Borrado de datos en tablas}
+		\begin{verbatim}
+		DELETE [LOW_PRIORITY] [QUICK] [IGNORE] 
+		FROM tbl_name [PARTITION (partition_list)]
+		[WHERE where_condition]
+		[ORDER BY ...]
+		[LIMIT row_count]
+		[RETURNING select_expr 
+		[, select_expr ...]]
+		\end{verbatim}
+	\end{block}
+	\begin{block}{Vaciado de tablas}
+		\begin{verbatim}
+	TRUNCATE [TABLE] tbl_name
+	[WAIT n | NOWAIT]
+		\end{verbatim}
+	\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Ejercicio 3.1}
+	Cree una tabla provincia con los siguientes campos:
+	\begin{itemize}
+		\item id
+		\item cautonoma\textunderscore id
+		\item literal
+	\end{itemize}
+Asegúrese de que la combinación de columnas id y cautonoma\textunderscore id es única. Utilice las referencias proporcionadas para insertar valores en la tabla: \href{https://www.ine.es/daco/daco42/codmun/cod_ccaa.htm}{CCAA}, \href{https://www.ine.es/daco/daco42/codmun/cod_provincia.htm}{provincias}.
+	
+\end{frame}
+
 
 %------------------------------------------------
 \begin{frame}

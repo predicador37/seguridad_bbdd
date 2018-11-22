@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+SELECT
+[ALL | DISTINCT | DISTINCTROW]
+[HIGH\PYGZus{}PRIORITY]
+[STRAIGHT\PYGZus{}JOIN]
+[SQL\PYGZus{}SMALL\PYGZus{}RESULT] [SQL\PYGZus{}BIG\PYGZus{}RESULT] [SQL\PYGZus{}BUFFER\PYGZus{}RESULT]
+[SQL\PYGZus{}CACHE | SQL\PYGZus{}NO\PYGZus{}CACHE] [SQL\PYGZus{}CALC\PYGZus{}FOUND\PYGZus{}ROWS]
+select\PYGZus{}expr [, select\PYGZus{}expr ...]
+[ FROM table\PYGZus{}references
+[WHERE where\PYGZus{}condition]
+[GROUP BY \PYGZob{}col\PYGZus{}name | expr | position\PYGZcb{} [ASC | DESC], ... ]
+[HAVING where\PYGZus{}condition]
+[ORDER BY \PYGZob{}col\PYGZus{}name | expr | position\PYGZcb{} [ASC | DESC], ...]
+[LIMIT \PYGZob{}[offset,] row\PYGZus{}count | row\PYGZus{}count OFFSET offset\PYGZcb{}]
+[PROCEDURE procedure\PYGZus{}name(argument\PYGZus{}list)]
+[INTO OUTFILE \PYGZsq{}file\PYGZus{}name\PYGZsq{} [CHARACTER SET charset\PYGZus{}name]
+\end{Verbatim}

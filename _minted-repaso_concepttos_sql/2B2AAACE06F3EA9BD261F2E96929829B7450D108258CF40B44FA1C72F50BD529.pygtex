@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ALTER [ONLINE] [IGNORE] TABLE tbl\PYGZus{}name
+[WAIT n | NOWAIT]
+alter\PYGZus{}specification [, alter\PYGZus{}specification] ...
+
+DROP [TEMPORARY] TABLE [IF EXISTS] [/*COMMENT TO SAVE*/]
+tbl\PYGZus{}name [, tbl\PYGZus{}name] ...
+[WAIT n|NOWAIT]
+[RESTRICT | CASCADE]
+\end{Verbatim}

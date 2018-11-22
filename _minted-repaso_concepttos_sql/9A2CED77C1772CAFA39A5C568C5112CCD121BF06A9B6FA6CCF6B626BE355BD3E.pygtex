@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{USE} \PYG{p}{[}\PYG{k}{database} \PYG{n}{name}\PYG{p}{]}
+\end{Verbatim}
