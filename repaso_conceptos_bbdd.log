@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  18 NOV 2018 00:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  22 NOV 2018 00:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1391,9 +1391,15 @@ D0D13C30822862D436.pygtex)) [32
 (./_minted-repaso_conceptos_bbdd/9B02F068E33702496B7F22CC46EFD254C80DE11D854CBB
 D0D13C30822862D436.pygtex)) [41
 
-] [42
+]
+\openout4 = `repaso_conceptos_bbdd.vrb'.
+
+ (./repaso_conceptos_bbdd.vrb) [42
 
 ] [43
+
+]
+[44
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@nav=\write9
@@ -1405,14 +1411,14 @@ D0D13C30822862D436.pygtex)) [41
 \tf@snm=\write11
 \openout11 = `repaso_conceptos_bbdd.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 767.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 767.
- (./repaso_conceptos_bbdd.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 780.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 780.
+(./repaso_conceptos_bbdd.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 767.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 767.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 780.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 780.
 Package rerunfilecheck Info: File `repaso_conceptos_bbdd.out' has not changed.
 (rerunfilecheck)             Checksum: 1304D6CC9BEE1DDA8A8E1F7C37D150D7;509.
 
@@ -1424,10 +1430,10 @@ runsystem(rm repaso_conceptos_bbdd.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 23127 strings out of 493013
- 455578 string characters out of 6135682
+ 23140 strings out of 493013
+ 455760 string characters out of 6135682
  576168 words of memory out of 5000000
- 25939 multiletter control sequences out of 15000+600000
+ 25948 multiletter control sequences out of 15000+600000
  10042 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,69p,787b,668s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1440,10 +1446,10 @@ st/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt10.pfb>
-Output written on repaso_conceptos_bbdd.pdf (43 pages, 526883 bytes).
+Output written on repaso_conceptos_bbdd.pdf (44 pages, 528919 bytes).
 PDF statistics:
- 1242 PDF objects out of 1440 (max. 8388607)
- 1165 compressed objects within 12 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 1268 PDF objects out of 1440 (max. 8388607)
+ 1190 compressed objects within 12 object streams
+ 100 named destinations out of 1000 (max. 500000)
  125 words of extra memory for PDF output out of 10000 (max. 10000000)
 

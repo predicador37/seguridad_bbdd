@@ -1,2 +1,10 @@
-\frametitle{Ejercicio 2.5: conexión segura desde Python}
-	Crear un pequeño script en Python que, usando el paquete \mintinline{python}{MySQLdb}, utilice los certificados de cliente para conectarse a la base de datos y ejecutar el comando \mintinline{sql}{"SHOW STATUS LIKE 'Ssl_cipher'"}, cuyo resultado deberá mostrar por consola.
+\frametitle{Data at Rest Encryption}
+	También conocida como "Transparent Data Encryption", esta tecnología permite encriptar los datos de las tablas almacenadas en disco. Está soportada en varios motores de almacenamiento (XtraDB, InnoDB, Aria). Entre sus limitaciones:
+
+	\begin{itemize}
+		\item No se encriptan metadatos ni datos enviados al cliente.
+		\item El log de error no se encripta.
+		\item El complemento de auditoría no puede generar salida encriptada.
+	\end{itemize}
+
+Para utilizar esta funcionalidad, es necesario instalar un complemento que gestione las claves de encriptación (ej: \href{https://mariadb.com/kb/en/encryption-key-management/}{File Key Management Plugin})
