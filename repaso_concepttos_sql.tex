@@ -477,7 +477,11 @@ Un privilegio se corresponde con un derecho a hacer uso de ciertas sentencias SQ
 	\frametitle{Cuentas de usuario}
 Las cuentas de usuario en MariaDB consisten en un usuario y un nombre de host. Esto permite crear cuentas de usuario con el mismo nombre que puedan conectarse desde diferentes hosts. Las reglas a utilizar son las siguientes:
 \begin{itemize}
-	\item La sintaxis es: username@hostname
+	\item La sintaxis es: 'username'@'hostname'
+	\item Una cuenta para un único usuario puede definirse así: 'username'@'\%'.
+	\item No es necesario entrecomillar el usuario y el host si no contienen caracteres especiales (como guiones).
+	\item Para entrecomillar, pueden usarse backticks, comillas simples o comillas dobles.
+	\item Si se entrecomilla usuario y host, deben hacerse de forma separada e independiente.
 	
 \end{itemize}
 	
