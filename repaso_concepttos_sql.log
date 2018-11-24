@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.10.26)  22 NOV 2018 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  24 NOV 2018 10:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -347,8 +347,8 @@ Package: xxcolor 2003/10/24 ver 0.1
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 )
-(/home/emm13775/texmf/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -402,53 +402,55 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@linkcounter=\count119
 \Hy@pagecounter=\count120
 
-(/home/emm13775/texmf/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count121
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `bookmarks' set `true' on input line 4383.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 4383.
-Package hyperref Info: Option `implicit' set `false' on input line 4383.
-Package hyperref Info: Hyper figures OFF on input line 4509.
-Package hyperref Info: Link nesting OFF on input line 4514.
-Package hyperref Info: Hyper index ON on input line 4517.
-Package hyperref Info: Plain pages OFF on input line 4524.
-Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4362.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4362.
+Package hyperref Info: Option `implicit' set `false' on input line 4362.
+Package hyperref Info: Hyper figures OFF on input line 4486.
+Package hyperref Info: Link nesting OFF on input line 4491.
+Package hyperref Info: Hyper index ON on input line 4494.
+Package hyperref Info: Plain pages OFF on input line 4501.
+Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
-Package hyperref Info: Bookmarks ON on input line 4762.
+Package hyperref Info: Bookmarks ON on input line 4735.
 \c@Hy@tempcnt=\count122
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5115.
+LaTeX Info: Redefining \url on input line 5088.
 \XeTeXLinkMargin=\dimen165
 \Fld@menulength=\count123
 \Field@Width=\dimen166
 \Fld@charsize=\dimen167
-Package hyperref Info: Hyper figures OFF on input line 6369.
-Package hyperref Info: Link nesting OFF on input line 6374.
-Package hyperref Info: Hyper index ON on input line 6377.
-Package hyperref Info: backreferencing OFF on input line 6384.
-Package hyperref Info: Link coloring OFF on input line 6389.
-Package hyperref Info: Link coloring with OCG OFF on input line 6394.
-Package hyperref Info: PDF/A mode OFF on input line 6399.
-LaTeX Info: Redefining \ref on input line 6439.
-LaTeX Info: Redefining \pageref on input line 6443.
+Package hyperref Info: Hyper figures OFF on input line 6342.
+Package hyperref Info: Link nesting OFF on input line 6347.
+Package hyperref Info: Hyper index ON on input line 6350.
+Package hyperref Info: backreferencing OFF on input line 6357.
+Package hyperref Info: Link coloring OFF on input line 6362.
+Package hyperref Info: Link coloring with OCG OFF on input line 6367.
+Package hyperref Info: PDF/A mode OFF on input line 6372.
+LaTeX Info: Redefining \ref on input line 6412.
+LaTeX Info: Redefining \pageref on input line 6416.
 \Hy@abspage=\count124
 
 
 Package hyperref Message: Stopped early.
 
 )
-Package hyperref Info: Driver (autodetected): hpdftex.
- (/home/emm13775/texmf/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
 \Fld@listcount=\count125
 \c@bookmark@seq@number=\count126
 
@@ -661,7 +663,7 @@ ctangles.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemewh
 ale.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/color/beamercolorthemeor
-chid.sty)) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+chid.sty)) (/home/predicador/texmf/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen190
 \lightrulewidth=\dimen191
@@ -708,8 +710,8 @@ Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
 ))
-(/home/emm13775/texmf/tex/latex/svg/svg.sty
-Package: svg 2018/09/08 v2.02 (include SVG pictures)
+(/home/predicador/texmf/tex/latex/svg/svg.sty
+Package: svg 2017/11/29 v2.01 (include SVG pictures)
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
 Package: scrbase 2016/06/14 v3.21 KOMA-Script package (KOMA-Script-independent 
@@ -730,10 +732,6 @@ Package filehook Info: Package 'scrlfile' detected and compensated for on input
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 67.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)
-\svg@box=\box53
 \c@svg@param@lastpage=\count160
 \c@svg@param@currpage=\count161
 
@@ -791,7 +789,7 @@ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
 <2008/02/07> (tvz)
 \FV@CodeLineNo=\count163
 \FV@InFile=\read2
-\FV@TabBox=\box54
+\FV@TabBox=\box53
 \c@FancyVerbLine=\count164
 \FV@StepNumber=\count165
 \FV@OutFile=\write5
@@ -815,12 +813,12 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \quotelinenumbersep=\dimen269
 \bframerule=\dimen270
 \bframesep=\dimen271
-\bframebox=\box55
+\bframebox=\box54
 LaTeX Info: Redefining \\ on input line 3056.
 )
 \c@FV@TrueTabGroupLevel=\count173
 \c@FV@TrueTabCounter=\count174
-\FV@TabBox@Group=\box56
+\FV@TabBox@Group=\box55
 \FV@TmpLength=\skip57
 \c@FV@HighlightLinesStart=\count175
 \c@FV@HighlightLinesStop=\count176
@@ -830,16 +828,16 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@BreakSymbolIndentLeft=\dimen275
 \FV@BreakSymbolIndentRight=\dimen276
 \c@FancyVerbLineBreakLast=\count177
-\FV@LineBox=\box57
-\FV@LineIndentBox=\box58
+\FV@LineBox=\box56
+\FV@LineIndentBox=\box57
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count178
 \float@exts=\toks47
-\float@box=\box59
+\float@box=\box58
 \@float@everytoks=\toks48
-\@floatcapt=\box60
+\@floatcapt=\box59
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
@@ -871,7 +869,7 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen282
 )
 \minted@appexistsfile=\read3
-\minted@bgbox=\box61
+\minted@bgbox=\box60
 \minted@code=\write7
 \c@minted@FancyVerbLineTemp=\count184
 \c@minted@pygmentizecounter=\count185
@@ -946,7 +944,7 @@ LaTeX Font Info:    ... okay on input line 115.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count187
 \scratchdimen=\dimen283
-\scratchbox=\box62
+\scratchbox=\box61
 \nofMPsegments=\count188
 \nofMParguments=\count189
 \everyMPshowfont=\toks50
@@ -973,10 +971,10 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box63
+\AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring ON on input line 115.
 
-(/home/emm13775/texmf/tex/latex/hyperref/nameref.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -1196,12 +1194,133 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 ]
 \openout4 = `repaso_concepttos_sql.vrb'.
 
- (./repaso_concepttos_sql.vrb) [10
+ (./repaso_concepttos_sql.vrb
+\openout7 = `repaso_concepttos_sql.pyg'.
 
-] [11
+
+(./_minted-repaso_concepttos_sql/FA250C5327E8FC40B3C48F95B126AC4BD121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/7BB3A70E2242948FAEC2B9AD86C47559D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/658F02BA4E45C6497D505207B279E682D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/CA35C56C0C379F292F8FAB68B3A19F61D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/CD3D606EFFD9CAC8AE2176C7C0F94318D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/CA35C56C0C379F292F8FAB68B3A19F61D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)) [10
 
 ]
-[12
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [11
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/D090EE44604248ECB07CD7BF59B7A523BA2353C64533E3
+5E58FAC05D0CCF358B.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/BF803E17E4BD871AF3BDFB6BB6453789BA2353C64533E3
+5E58FAC05D0CCF358B.pygtex)) [12
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [13
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb) [14
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [15
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb) [16
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [17
+
+]
+LaTeX Font Info:    Try loading font information for U+msa on input line 441.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 441.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
+line 441.
+
+(/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+)
+Overfull \hbox (3.41064pt too wide) in paragraph at lines 441--441
+ [] 
+ []
+
+
+Overfull \vbox (7.75421pt too high) detected at line 441
+ []
+
+[18
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [19
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [20
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb) [21
+
+] [22
+
+] [23
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@nav=\write9
@@ -1213,16 +1332,16 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 \tf@snm=\write11
 \openout11 = `repaso_concepttos_sql.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 337.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 337.
-(./repaso_concepttos_sql.aux
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
+ (./repaso_concepttos_sql.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 337.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 337.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
 Package rerunfilecheck Info: File `repaso_concepttos_sql.out' has not changed.
-(rerunfilecheck)             Checksum: 80E336A2E0F1DDA159B67DF3B88355CE;96.
+(rerunfilecheck)             Checksum: 7413B92A1F62D74313E5DEEFAA59045C;187.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1232,24 +1351,26 @@ runsystem(rm repaso_concepttos_sql.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 22705 strings out of 493013
- 442336 string characters out of 6135681
- 575879 words of memory out of 5000000
- 25665 multiletter control sequences out of 15000+600000
- 6313 words of font info for 24 fonts, out of 8000000 for 9000
+ 22868 strings out of 493013
+ 449132 string characters out of 6135682
+ 576094 words of memory out of 5000000
+ 25745 multiletter control sequences out of 15000+600000
+ 9852 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,69p,787b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on repaso_concepttos_sql.pdf (12 pages, 115138 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt9.pfb>
+Output written on repaso_concepttos_sql.pdf (23 pages, 161789 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 344 compressed objects within 4 object streams
- 29 named destinations out of 1000 (max. 500000)
- 59 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 632 compressed objects within 7 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 

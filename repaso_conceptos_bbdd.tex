@@ -673,7 +673,7 @@ Si el valor de \mintinline{bash}{have_ssl} es DISABLED implica que el SGBD tiene
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Ejercicio 2.4: creación de certificados SSL}
+	\frametitle{Ejercicio 2.4: conexiones seguras}
 	
 	\begin{exampleblock}{Activar SSL en el servidor}
 		\begin{verbatim}
@@ -698,7 +698,7 @@ Si el valor de \mintinline{bash}{have_ssl} es DISABLED implica que el SGBD tiene
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Ejercicio 2.4: creación de certificados SSL}
+	\frametitle{Ejercicio 2.4: conexiones seguras}
 	
 	\begin{exampleblock}{Configurar SSL en cliente}
 		\begin{verbatim}
@@ -718,7 +718,7 @@ Si el valor de \mintinline{bash}{have_ssl} es DISABLED implica que el SGBD tiene
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Ejercicio 2.4: creación de certificados SSL}
+	\frametitle{Ejercicio 2.4: conexiones seguras}
 	
 	\begin{exampleblock}{Conexión con el cliente}
 		\begin{verbatim}
@@ -750,7 +750,8 @@ Si el valor de \mintinline{bash}{have_ssl} es DISABLED implica que el SGBD tiene
 		\item El complemento de auditoría no puede generar salida encriptada.
 	\end{itemize}
 
-Para utilizar esta funcionalidad, es necesario instalar un complemento que gestione las claves de encriptación (ej: \href{https://mariadb.com/kb/en/encryption-key-management/}{File Key Management Plugin})
+Para utilizar esta funcionalidad, es necesario instalar un complemento que gestione las claves de encriptación (ej: \href{https://mariadb.com/kb/en/encryption-key-management/}{File Key Management Plugin}). \\~\\
+El encriptado ocurre al escribir páginas a disco. También es posible encriptar archivos temporales y archivos de log binarios.
 \end{frame}
 %------------------------------------------------
 \begin{frame}

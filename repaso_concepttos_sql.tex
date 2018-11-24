@@ -247,7 +247,7 @@ select_expr [, select_expr ...]
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{DML}
+	\frametitle{DML: INSERT, UPDATE}
 	\setbeamerfont{block body}{size=\small}
 
 	\begin{block}{Inserción de datos en tablas}
@@ -261,19 +261,19 @@ select_expr [, select_expr ...]
 	\end{block}
 	\begin{block}{Actualización de datos en tablas}
 	\begin{verbatim}
-	INSERT [LOW_PRIORITY | DELAYED | HIGH_PRIORITY] [IGNORE]
-	[INTO] tbl_name [PARTITION (partition_list)] [(col,...)]
-	{VALUES | VALUE} ({expr | DEFAULT},...),(...),...
-	[ ON DUPLICATE KEY UPDATE
-	col=expr
-	[, col=expr] ... ]
+UPDATE [LOW_PRIORITY] [IGNORE] table_reference 
+[PARTITION (partition_list)]
+SET col1={expr1|DEFAULT} [,col2={expr2|DEFAULT}] ...
+[WHERE where_condition]
+[ORDER BY ...]
+[LIMIT row_count]
 	\end{verbatim}
 \end{block}
 	
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{DML}
+	\frametitle{DML: DELETE, TRUNCATE}
 	\setbeamerfont{block body}{size=\small}
 	
 	\begin{block}{Borrado de datos en tablas}
@@ -297,6 +297,26 @@ select_expr [, select_expr ...]
 \end{frame}
 
 \begin{frame}[fragile]
+	\frametitle{DML: JOIN}
+	\setbeamerfont{block body}{size=\small}
+		\begin{itemize}
+		\item \mintinline{sql}{INNER JOIN}: el conjunto resultante contiene filas que tienen coincidencia en ambas tablas para la condición especificada.
+		\item \mintinline{sql}{CROSS JOIN}: producto cartesiano (todos con todos).
+		\item \mintinline{sql}{LEFT JOIN}: el conjunto resultante contiene todas las filas de la tabla en el lado izquierdo de la unión. Si no están en el derecho, aparecerá \mintinline{sql}{NULL}.
+		\item \mintinline{sql}{RIGHT JOIN}: el conjunto resultante contiene todas las filas de la tabla en el lado derecho de la unión. Si no están en el izquierdo, aparecerá \mintinline{sql}{NULL}.
+	\end{itemize}
+	
+	\begin{exampleblock}{Ejemplos}
+	
+		\begin{verbatim}
+		SELECT * FROM t1 INNER JOIN t2 ON t1.a = t2.b;
+		SELECT * FROM t1 LEFT JOIN t2 ON t1.a = t2.b;
+		\end{verbatim}
+	\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
 	\frametitle{Ejercicio 3.1}
 	Cree una tabla provincia con los siguientes campos:
 	\begin{itemize}
@@ -305,6 +325,162 @@ select_expr [, select_expr ...]
 		\item literal
 	\end{itemize}
 Asegúrese de que la combinación de columnas id y cautonoma\textunderscore id es única. Utilice las referencias proporcionadas para insertar valores en la tabla: \href{https://www.ine.es/daco/daco42/codmun/cod_ccaa.htm}{CCAA}, \href{https://www.ine.es/daco/daco42/codmun/cod_provincia.htm}{provincias}.
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Ejercicio 3.2}
+	En primer lugar, será necesario descargar la base de datos sakila en el directorio \/home\/vagrant, por ejemplo,  y descomprimirla:
+	\mintinline{bash}{wget http://downloads.mysql.com/docs/sakila-db.zip}
+	\mintinline{bash}{unzip http://downloads.mysql.com/docs/sakila-db.zip}
+	
+\begin{block}{Instalación de sakila}
+	\begin{verbatim}
+	mysql -u root -p
+	mysql> SOURCE /home/vagrant/sakila-db/sakila-schema.sql;
+	mysql> SOURCE /home/vagrant/sakila-db/sakila-data.sql;
+	mysql> USE sakila;
+	mysql> SHOW TABLES;
+	\end{verbatim}
+	
+\end{block}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Ejercicio 3.2}
+    Realizar las siguientes consultas:
+    
+    \begin{itemize}
+    	\item Seleccionar la columna last\_name de la tabla actor
+    	\item Seleccionar las columnas title, description, rating y length de la tabla film que duren 3 horas o más.
+    	\item Seleccionar todas las columnas de la tabla customer en las que el cliente está inactivo o cuyo apellido comienza con la letra M.
+    	\item Seleccionar la fecha de pago y la cantidad de la tabla payment para los primeros 20 pagos ordenados por cantidad descendentemente.
+    \end{itemize}
+	
+\end{frame}
+
+\section{Vistas}
+
+\begin{frame}[fragile]
+	\frametitle{Vistas}
+	\setbeamerfont{block body example}{size=\footnotesize}
+	Una vista se define por medio de una consulta SQL y su contenido se genera al ser invocada por una aplicación o por ora consulta. Se pueden considerar como \textbf{tablas virtuales} sin registros físicos. O como consultas SELECT guardadas para ser consultadas. Ventajas:
+	
+	 \begin{itemize}
+		\item Permiten ocultar y reutilizar consultas complejas, como uniones.
+		\item Protegen los datos originales ocultando columnas o filas de usuarios no autorizados.
+		\item Pueden utilizarse para proporcionar alias de los nombres de columnas para hacerlas más legibles.
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Vistas}
+\begin{exampleblock}{Sintaxis en MariaDB}
+	\begin{verbatim}
+		CREATE
+		[OR REPLACE]
+		[ALGORITHM = {UNDEFINED | MERGE | TEMPTABLE}]
+		[DEFINER = { user | CURRENT_USER | role | CURRENT_ROLE }]
+		[SQL SECURITY { DEFINER | INVOKER }]
+		VIEW [IF NOT EXISTS] view_name [(column_list)]
+		AS select_statement
+		[WITH [CASCADED | LOCAL] CHECK OPTION]
+	\end{verbatim}
+\end{exampleblock}
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Ejercicio 3.3}
+ Liste el "top five" de géneros en ingresos brutos en orden descendente.  genres in gross revenue in descending order. (Pista: puede necesitar las tablas \textit{category, film\_category, inventory, payment y rental}). \\~\\
+ 
+ En su nuevo puesto de ejecutivo, le gustaría disponer de una forma sencilla de consultar este "top five". Utilice la consulta anterior para crear una vista que satisfaga esta necesidad.
+ 
+ 
+\end{frame}
+
+\section{Privilegios SQL}
+\begin{frame}[fragile]
+	\frametitle{Privilegios SQL: definición y tipos}
+Un privilegio se corresponde con un derecho a hacer uso de ciertas sentencias SQL como SELECT o INSERT sobre uno o más objetos de base de datos. Los privilegios pueden concederse o revocarse. Tanto el DBA como el propietario de un esquema dado pueden conceder o revocar privilegios a cuentas de usuario, a nivel de cuenta, tabla, vista o columna.
+
+\begin{itemize}
+	\item Privilegios administrativos: permiten a los usuarios gestionar la operación del SGBD. Son globales y no específicos de una base de datos en particular. Ej: CREATE USER, SHOW DATABASES.
+	\item Privilegios a nivel de BD: se aplican a una base de datos y a todos los objetos dentro de la misma. Pueden aplicarse globalmente o para BDs específicas.
+	\item Privilegios a nivel de objetos de BD: tablas, índices, vistas. Pueden aplicarse globalmente o a una BD específica.
+	
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Privilegios SQL más comunes}
+	\begin{table}
+		\begin{tabular}{l l l}
+			\toprule
+			\textbf{Privilegio} & \textbf{Columna} & \textbf{Contexto}\\
+			\midrule
+			CREATE 	& Create\_priv 	& databases, tables, or indexes \\
+			DROP 	& Drop\_priv 	& databases, tables, or views \\
+			REFERENCES &References\_priv &	databases or tables \\
+			ALTER 	& Alter\_priv &	tables \\
+			DELETE 	& Delete\_priv &	tables \\
+			INSERT & Insert\_priv &	tables or columns \\
+			SELECT & Select\_priv &	tables or columns \\
+			UPDATE & Update\_priv &	tables or columns \\
+			CREATE VIEW &	Create\_view\_priv &	views \\
+			SHOW VIEW  &	Show\_view\_priv & views \\
+			CREATE USER &	Create\_user\_priv  &	server administration \\
+			SHOW DATABASES & Show\_db\_priv &	server administration \\
+			ALL & [PRIVILEGES] 	&  	server administration \\
+			\bottomrule
+		\end{tabular}
+		\caption{Privilegios más comunes}
+	\end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Privilegios SQL: ejemplo}
+	Lo habitual:
+	
+	\begin{exampleblock}{Ejemplo de concesión de privilegios}
+		\begin{verbatim}
+		GRANT ALL PRIVILEGES ON *.* TO 'user'@%
+	    identified by 'strongpassword'
+		\end{verbatim}
+
+	\end{exampleblock}
+	
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Privilegios SQL: tablas relacionadas}
+	La información sobre privilegios se almacena en tablas de sistema:
+	
+\begin{itemize}
+	\item user: cuentas de usuario, privilegios globales y otras columnas.
+	\item db: privilegios a nivel de base de datos.
+	\item host: en las últimas versiones de MariaDB ya no existe esta tabla.
+	\item tables\_priv: privilegios a nivel de tabla.
+	\item columns\_priv: privilegios a nivel de columna.
+	\item procs\_priv: privilegios a nivel de funciones y procedimientos almacenados.
+	\item proxies\_priv: privilegios a nivel de proxy.
+	
+\end{itemize}
+	
+	
+\end{frame}
+
+\begin{frame}[fragile]
+	\frametitle{Cuentas de usuario}
+Las cuentas de usuario en MariaDB consisten en un usuario y un nombre de host. Esto permite crear cuentas de usuario con el mismo nombre que puedan conectarse desde diferentes hosts. Las reglas a utilizar son las siguientes:
+\begin{itemize}
+	\item La sintaxis es: username@hostname
+	
+\end{itemize}
+	
 	
 \end{frame}
 

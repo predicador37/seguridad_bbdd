@@ -7,4 +7,5 @@
 		\item El complemento de auditoría no puede generar salida encriptada.
 	\end{itemize}
 
-Para utilizar esta funcionalidad, es necesario instalar un complemento que gestione las claves de encriptación (ej: \href{https://mariadb.com/kb/en/encryption-key-management/}{File Key Management Plugin})
+Para utilizar esta funcionalidad, es necesario instalar un complemento que gestione las claves de encriptación (ej: \href{https://mariadb.com/kb/en/encryption-key-management/}{File Key Management Plugin}). \\~\\
+El encriptado ocurre al escribir páginas a disco. También es posible encriptar archivos temporales y archivos de log binarios.

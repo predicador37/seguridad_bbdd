@@ -1,9 +1,8 @@
-\frametitle{Ejercicio 3.1}
-	Crear una tabla provincia con los siguientes campos:
-	\begin{itemize}
-		\item id
-		\item cautonoma\textunderscore id
-		\item literal
-	\end{itemize}
-Asegúrese de que la combinación de columnas id y cautonoma\textunderscore id es única. Utilice las referencias proporcionadas para insertar valores en la tabla: \href{https://www.ine.es/daco/daco42/codmun/cod_ccaa.htm}{CCAA}, \href{https://www.ine.es/daco/daco42/codmun/cod_provincia.htm}{provincias}.
+\frametitle{Cuentas de usuario}
+Las cuentas de usuario en MariaDB consisten en un usuario y un nombre de host. Esto permite crear cuentas de usuario con el mismo nombre que puedan conectarse desde diferentes hosts. Las reglas a utilizar son las siguientes:
+\begin{itemize}
+	\item La sintaxis es: username@hostname
+
+\end{itemize}
+
 

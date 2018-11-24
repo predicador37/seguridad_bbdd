@@ -1,3 +1,5 @@
 \select@language {spanish}
 \beamer@sectionintoc {1}{Definici\'on}{3}{0}{1}
 \beamer@sectionintoc {2}{SQL b\'asico}{4}{0}{2}
+\beamer@sectionintoc {3}{Vistas}{14}{0}{3}
+\beamer@sectionintoc {4}{Privilegios SQL}{17}{0}{4}
