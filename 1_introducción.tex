@@ -77,12 +77,36 @@
 %\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
 }
 
+
+\AtBeginSection[]{
+	\begin{frame}
+		\vfill
+		\centering
+	
+			\usebeamerfont{title}\insertsectionhead\par%
+	
+		\vfill
+	\end{frame}
+}
+
+\AtBeginSubsection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		
+			\usebeamerfont{title}\insertsubsectionhead\par%
+	
+		\vfill
+	\end{frame}
+}
+
 \usepackage{graphicx} % Allows including images
 \usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
 \usepackage[latin9]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage{svg}
 \usepackage{caption}
+\usepackage{minted}
 \captionsetup{font=scriptsize,labelfont=scriptsize}
 \setbeamerfont{footnote}{size=\tiny}
 \hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
@@ -144,10 +168,10 @@ Sin embargo, la seguridad en bases de datos ha sido muchas veces un aspecto al q
 	La mayor parte de las veces, la seguridad en una base de datos consiste en aplicar los principios ya probados y utilizados en el ámbito de las redes de comunicaciones durante décadas: \\~\\
 	
 \begin{itemize}
-	\item Filosofía del mínimo privilegio
-	\item Eliminar funcionalidad innecesaria
-	\item Ser estricto en la autenticación y el control de acceso
-	\item Utilizar encriptación cuando sea necesario
+	\item Filosofía del mínimo privilegio.
+	\item Eliminar funcionalidad innecesaria.
+	\item Ser estricto en la autenticación y el control de acceso.
+	\item Utilizar encriptación cuando sea necesario.
 \end{itemize}
 \end{frame}
 
@@ -186,9 +210,9 @@ Determinados autores\cite{p1} consideran que PostgreSQL es posiblemente la base 
 	\frametitle{Normativa aplicable}
 	
 	\begin{itemize}
-		\item Reglamento General de Protección de Datos (RGPD)
-		\item UNE-EN ISO/IEC 27001
-		\item En la Administración Pública, Esquema Nacional de Seguridad (ENS)
+		\item \href{https://www.boe.es/doue/2016/119/L00001-00088.pdf}{Reglamento General de Protección de Datos (RGPD)}
+		\item \href{http://www.iso27000.es/}{UNE-EN ISO/IEC 27001}
+		\item \href{https://www.ccn-cert.cni.es/ens.html}{En la Administración Pública, Esquema Nacional de Seguridad (ENS)}
 	\end{itemize}
 \end{frame}
 
@@ -307,27 +331,46 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 		\item Los datos tienen que estar disponibles tan sólo para los usuarios apropiados.
 		\item Debe de ser posible auditar quién ha accedido a qué datos.
 	\end{itemize}
+\begin{exampleblock}{Ejemplos de no disponibilidad}
+	\begin{itemize}
+	 \item Imposibilidad de acceder al correo electrónico por un error de configuración.
+	 \item Caída de un sistema debido a un DoS.
+	\end{itemize}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Integridad}
 	
 	\begin{itemize}
-		\item Es necesario verificar que cualquier dato de entrada es preciso y verificable.
+		\item Es necesario verificar que cualquier dato de entrada es preciso y verificable, correcto y libre de modificaciones y/o errores.
 		\item Debe existir un mecanismo que informe de cualquier cambio en los datos así como su autoría, para garantizar el cumplimiento de las reglas de negocio y la normativa de protección de datos.
 		\item Deben existir mecanismos que eviten que los datos sean adulterados o corrompidos.
 	\end{itemize}
+\begin{exampleblock}{Ejemplos de ataques contra la integridad}
+	\begin{itemize}
+		\item Alteración malintencionada de los ficheros de un sistema de información explotando una vulnerabilidad.
+		\item Modificación de un informe de ventas por un empleado malintencionado o por un error humano.
+	\end{itemize}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}
 	\frametitle{Confidencialidad}
 	
 	\begin{itemize}
-		\item Hay que asegurar que los datos confidenciales solo están a disposición de determinados usuarios.
+		\item Hay que asegurar que los datos confidenciales solo están a disposición de determinados usuarios autorizados.
 		\item Es necesario informar de quién ha accedido a qué datos y qué se ha hecho con ellos.
 		\item Deben existir mecanismos que impidan la extracción y revelación no autorizada de datos.
 		\item Han de asegurarse los datos frente a posibles brechas de seguridad internas o externas.
 	\end{itemize}
+\begin{exampleblock}{Ejemplos de falta de confidencialidad}
+	\begin{itemize}
+		\item Robo de información por parte de un atacante a través de Internet.
+		\item Divulgación no autorizada a través de redes.
+		\item Acceso por parte de un empleado a información crítica de una Organización a la que no debería tener acceso.
+	\end{itemize}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}
@@ -338,6 +381,12 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 		\item Es necesario confirmar que los usuarios que acceden al sistema son quienes dicen ser.
 		\item Es necesario verificar que cualquier dato de salida está destinado al receptor esperado.
 	\end{itemize}
+\begin{exampleblock}{Ejemplos de falta de autenticidad}
+	\begin{itemize}
+		\item Firma de un documento por otra persona haciéndose pasar por el firmante.
+		\item Uso de un usuario y una contraseña de un compañero de trabajo.
+	\end{itemize}
+\end{exampleblock}
 \end{frame}
 
 \begin{frame}
@@ -389,7 +438,7 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 
 \begin{frame}
 	\frametitle{Principales amenazas en la seguridad de bases de datos}
-	Se pueden identificar las siguientes amenazas comunes en seguridad de bases de datos:  \\~\\
+	Es posible identificar las siguientes amenazas comunes en seguridad de bases de datos:
 	
 	\begin{itemize}
 		\item Mal diseño de privilegios de acceso.
@@ -407,7 +456,7 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 	Para evitar este tipo de situaciones, se dan dos recomendaciones:
 	\begin{itemize}
 		\item Diseñar una política de concesión de privilegios de acceso ajustada a los roles necesarios en la organización.
-		\item Realizar auditorías periódicas en las que se comprueben roles y reglas de acceso, llevando a cabo los cambios necesarios para evitar cualquier exposición no deseada.
+		\item Realizar \textbf{auditorías periódicas} en las que se comprueben roles y reglas de acceso, llevando a cabo los cambios necesarios para evitar cualquier exposición no deseada.
 	\end{itemize}
 
 \begin{alertblock}{Atención: aviso a los usuarios }
@@ -420,7 +469,7 @@ Si se hacen cambios en los privilegios de acceso, los usuarios lo notarán. Una b
 	\frametitle{Malware}
 	Infecciones comunes a través del correo electrónico, usando técnicas como el \href{https://latam.kaspersky.com/resource-center/definitions/spear-phishing}{\textit{spear phising}}, pueden convertir a los usuarios de bases de datos en conductos de entrada para que los atacantes ganen acceso a redes y datos sensibles. Para incrementar la protección sobre este tipo de ataques, de difícil detección, se recomiendan las siguientes acciones preventivas:
 		\begin{itemize}
-		\item Campañas de comunicación, concienciación y formación a los usuarios del correo, para que sean capaces de identificar este tipo de amenazas.
+		\item Campañas de \textbf{comunicación, concienciación y formación} a los usuarios del correo, para que sean capaces de identificar este tipo de amenazas.
 		\item Últimos avances en tecnologías de seguridad para el correo electrónico (filtros, inspección de URLs...) 
 	\end{itemize}
 \begin{alertblock}{Atención: el correo electrónico puede llegar a ser inutilizable }
@@ -432,7 +481,7 @@ Si los filtros se aplican sin control o los sistemas de seguridad no están corre
 \begin{frame}
 	\frametitle{Poca experiencia y formación en seguridad de bbdd}
 	Muchos de los incidentes de seguridad en TI están relacionados con el \textit{``factor humano''}. Estos incidentes podrían prevenirse siguiendo buenas prácticas en la implementación de controles internos y a través de campañas de formación, comunicación y concienciación de usuarios. \\~\\
-	Las tareas que ayudan a mejorar la seguridad de TI están muy relacionadas con la calidad; el personal interno debe estar al día y adecuadamente formado en tecnologías de bases de datos y seguridad. Los órganos directivos de las organizaciones deben comprender la importancia de dedicar recursos a este tipo de tareas, no siendo aceptable un argumento de reducción de costes para no hacerlo.
+	Las tareas que ayudan a mejorar la seguridad de TI están muy relacionadas con la calidad; el personal interno debe estar al día y adecuadamente formado en tecnologías de bases de datos y seguridad. Los órganos directivos de las organizaciones deben comprender la \textbf{importancia de dedicar recursos a este tipo de tareas}, no siendo aceptable un argumento de reducción de costes para no hacerlo.
 	\begin{block}{Recordatorio }
 \textit{	La calidad es gratis }- Crosby
 	\end{block}
@@ -525,6 +574,8 @@ En el caso presentado, escapando los caracteres especiales en los formularios. E
 	ResultSet rset = query.executeQuery();
 	\end{verbatim}
 \end{exampleblock}
+
+Utilizando \textit{prepared statements}, la entrada del usuario se trata como el contenido de un parámetro y no como parte de la propia sentencia SQL. En el caso de \textit{Bobby Tables}, con el ejemplo anterior se insertaría el texto \textit{''Robert'); DROP TABLE students; --``} en la columna del nombre del alumno.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -560,7 +611,7 @@ Indique si está afectado por la vulnerabilidad de inyección SQL y, de ser así, p
 
 \begin{frame}
 	\frametitle{Exploits: fallos de autenticación en protocolos de red}
-	Uno de los problemas más famosos en esta categoría es el gusano \textit{``Slammer''}, para SQL Server. El servicio de resolución de SQL Server opera en UDP 1434, exponiendo una serie de funciones; dos de ellas eran vulnerables a ataques de buffer overflow. No era necesaria autenticación para explotar estas vulnerabilidades. \\~\\
+	Uno de los problemas más famosos en esta categoría es el gusano \href{https://es.wikipedia.org/wiki/SQL_Slammer}{\textit{``Slammer''}} (75.000 víctimas en diez minutos), para SQL Server. El servicio de resolución de SQL Server opera en UDP 1434, exponiendo una serie de funciones; dos de ellas eran vulnerables a ataques de buffer overflow. No era necesaria autenticación para explotar estas vulnerabilidades. \\~\\
 	Las mejores formas de protegerse de este tipo de ataques son:
 	\begin{itemize}
 			\item Parchear los SGBD al día.

@@ -1,0 +1,19 @@
+\frametitle{Ejercicio 2.7: instalación del plugin server\_audit}
+	\setbeamerfont{block body example}{size=\footnotesize}
+	Para instalar el plugin, iniciar sesión como root y ejecutar, como usuario root en MariaDB:
+\begin{exampleblock}{Activación del plugin server audit}
+	\begin{verbatim}
+INSTALL SONAME 'server_audit';
+SHOW GLOBAL VARIABLES LIKE 'server_audit%';
+SET GLOBAL server_audit_events='CONNECT,QUERY,TABLE';
+SET GLOBAL server_audit_logging=ON;
+	\end{verbatim}
+\end{exampleblock}
+
+El plugin tan solo tiene tres tipos de eventos a registrar. Para comprobar su funcionamiento, se puede hacer un seguimiento al fichero generado mientras se realizan consultas y operaciones en la BD con distintos usuarios:
+\begin{exampleblock}{Comprobación de la trazabilidad}
+	\begin{verbatim}
+# tail /var/lib/mysql/server_audit.log
+	\end{verbatim}
+\end{exampleblock}
+

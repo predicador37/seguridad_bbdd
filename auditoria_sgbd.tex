@@ -1,0 +1,336 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt, spanish]{beamer}
+
+
+\mode<presentation> {
+	
+	% The Beamer class comes with a number of default slide themes
+	% which change the colors and layouts of slides. Below this is a list
+	% of all the themes, uncomment each in turn to see what they look like.
+	
+	%\usetheme{default}
+	%\usetheme{AnnArbor}
+	%\usetheme{Antibes}
+	%\usetheme{Bergen}
+	%\usetheme{Berkeley}
+	%\usetheme{Berlin}
+	%\usetheme{Boadilla}
+	%\usetheme{CambridgeUS}
+	%\usetheme{Copenhagen}
+	%\usetheme{Darmstadt}
+	%\usetheme{Dresden}
+	%\usetheme{Frankfurt}
+	%\usetheme{Goettingen}
+	%\usetheme{Hannover}
+	%\usetheme{Ilmenau}
+	%\usetheme{JuanLesPins}
+	%\usetheme{Luebeck}
+	%\usetheme{Madrid}
+	%\usetheme{Malmoe}
+	%\usetheme{Marburg}
+	%\usetheme{Montpellier}
+	%\usetheme{PaloAlto}
+	%\usetheme{Pittsburgh}
+	\usetheme{Rochester}
+	%\usetheme{Singapore}
+	%\usetheme{Szeged}
+	%\usetheme{Warsaw}
+	
+	% As well as themes, the Beamer class has a number of color themes
+	% for any slide theme. Uncomment each of these in turn to see how it
+	% changes the colors of your current slide theme.
+	
+	%\usecolortheme{albatross}
+	%\usecolortheme{beaver}
+	%\usecolortheme{beetle}
+	%\usecolortheme{crane}
+	%\usecolortheme{dolphin}
+	%\usecolortheme{dove}
+	%\usecolortheme{fly}
+	%\usecolortheme{lily}
+	%\usecolortheme{orchid}
+	%\usecolortheme{rose}
+	%\usecolortheme{seagull}
+	%\usecolortheme{seahorse}
+	%\usecolortheme{whale}
+	%\usecolortheme{wolverine}
+	
+	%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+	%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+	
+	%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+}
+
+\AtBeginSection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		
+		\usebeamerfont{title}\insertsectionhead\par%
+		
+		\vfill
+	\end{frame}
+}
+
+\AtBeginSubsection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		
+		\usebeamerfont{title}\insertsubsectionhead\par%
+		
+		\vfill
+	\end{frame}
+}
+
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[latin9]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{svg}
+\usepackage{caption}
+\usepackage{minted}
+\captionsetup{font=scriptsize,labelfont=scriptsize}
+\setbeamerfont{footnote}{size=\tiny}
+\hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+\graphicspath{ {./img/} }
+\svgpath{ {./img/} }
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[Short title]{Certificación y controles de seguridad en Bases de Datos: Auditoría de SGBDs} % The short title appears at the bottom of every slide, the full title is only on the title page
+
+\author{Miguel Expósito Martín} % Your name
+\institute[UNICAN] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+	Universidad de Cantabria \\ % Your institution for the title page
+	\medskip
+	\textit{miguel.exposito@unican.es} % Your email address
+}
+\date{26/11/2018} % Date, can be changed to a custom date
+
+\addtobeamertemplate{navigation symbols}{}{%
+	\usebeamerfont{footline}%
+	\usebeamercolor[fg]{footline}%
+	\hspace{1em}%
+	\insertframenumber/\inserttotalframenumber
+}
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage % Print the title page as the first slide
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{Visión general} % Table of contents slide, comment this block out to remove it
+		\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+	\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+\section{Introducción} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+%------------------------------------------------
+
+
+\begin{frame}
+\frametitle{Introducción}
+La gran difusión de los SGBDs, junto con la consagración de los datos como uno de los recursos fundamentales de las empresas, han hecho que los temas relativos a su control interno y auditoría cobren mayor interés. Las bases de datos se han convertido en el corazón de los sistemas de información de las organizaciones, que cada día dependen más del buen funcionamiento de estas para su supervivencia. 
+\begin{block}{Control interno }	
+	El control interno informático vela diariamente porque todas las actividades de sistemas de información sean realizadas cumpliendo los procedimientos, leyes, estándares y normas fijados por la Dirección de la Organización y/o la Dirección de Informática. Su misión es asegurarse de que las medidas obtenidas de los mecanismos implantados por cada responsable sean correctas y válidas.
+\end{block}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Introducción}
+El control interno y la auditoría de bases de datos resultan fundamentales para el control y la auditoría de las aplicaciones que acceden a las mismas y para proporcionar confianza sobre todo el sistema de información.
+
+	
+	\begin{block}{Auditoría}	
+		La auditoría informática es un proceso puntual que recoge, agrupa y evalúa evidencias para determinar si un sistema de información salvaguarda los activos, mantiene la integridad de los datos, lleva a cabo eficazmente los fines de la organización y utiliza eficientemente los recursos.
+	\end{block}
+
+El ITGI (Information Technology Governance Institute) destaca en COBIT:
+
+\begin{itemize}
+	\item Se define la información como \textit{los datos en todos sus formatos, de entrada, procesados o de salida de los sistemas de información sea cual sea la forma en que son usados por la organización.}
+	\item La infraestructura, es decir, la tecnología e instalaciones, incluyendo el SGBD.
+\end{itemize}
+	
+\end{frame}
+
+\section{Metodología para la auditoría de SGBDs} % Sections can be created in order to organize your presentation into discrete blocks, all sections and subsections are automatically printed in the table of contents as an overview of the talk
+
+\begin{frame}
+	\frametitle{Metodología}
+	
+	Según ISACA\footnote{\href{https://www.isaca.org/}{https://www.isaca.org/}}, se empezaría fijando objetivos de control que minimizan los riesgos potenciales a los que está sometido el entorno de bases de datos. Por ejemplo:
+	
+	\begin{itemize}
+		\item Objetivo de conrol: preservar la confidencialidad.
+		\item Técnica de control: establecer tipos de usuarios, perfiles y privilegios.
+		\item Prueba de cumplimiento: listar los privilegios y perfiles existentes en el SGBD.
+		\item Prueba sustantiva: comprobar si la información ha sido corrompida comparándola con otra fuente o revisando documentos de entrada de datos y transacciones que se han ejecutado.
+	\end{itemize}
+
+Una vez evaluados los resultados, se obtienen unas conclusiones que serán comentadas y discutidas con los responsables directos de las áreas afectadas. Como resultado de la auditoría, se presentará un informe final en el que se expondrán las conclusiones más importantes a las que se ha llegado, así como el alcance de la misma.	
+
+\end{frame}
+
+\section{Recomendaciones de COBIT}
+
+\begin{frame}
+	\frametitle{Metodología}
+	
+	En COBIT, los principales objetivos de control relacionados con SGBDs son los siguientes:
+	
+	\begin{itemize}
+		\item Definir la arquitetura de información.
+		\begin{itemize}
+		\item Modelo Corporativo de Arquitectura de Información.
+		\item Diccionario de Datos Corporativo y Reglas de Sintaxis de Datos.
+		\end{itemize}
+		\item Esquema de Clasificación de Datos.
+		\item Gestión de Integridad.
+		\item Gestionar Datos.
+		\begin{itemize}
+			\item Requisitos de negocio para la gestión de datos.
+			\item Planes de almacenamiento y retención de datos.
+			\item Sistema de gestión de bibliotecas de medios.
+			\item Eliminación de datos.
+			\item Copia de respaldo y restauración.
+			\item Requisitos de seguridad para gestión de datos.
+		\end{itemize}
+	\end{itemize}
+	
+\end{frame}
+
+\section{Objetivos de control en el ciclo de vida de una base de datos}
+
+\begin{frame}
+	\frametitle{Objetivos de control: estudio previo y plan de trabajo}
+	
+En esta primera fase, es muy importante elaborar un \textbf{estudio tecnológico de viabilidad} en el cual se contemplen distintas alternativas para alcanzar los objetivos del proyecto acompañados de un análisis coste-beneficio de cada una de las opciones. Entre las alternativas a considerar estará la posibilidad de no llevar a cabo el proyecto (no siempre se necesita un SGBD), así como la disyuntiva entre desarrollo y compra. \\~\\
+La Dirección deberá revisar los estudios de viabilidad, ya que si no existe una decidida voluntad de la organización en su conjunto, impulsada por los directivos, el riesgo de fracaso aumenta considerablemente.\\~\\
+También será necesario llevar a cabo una \textbf{gestión de riesgos} y el establecimiento de un \textbf{plan director} en caso de que se decida llevar a cabo el proyecto.
+
+	
+\end{frame}
+\begin{frame}
+	\frametitle{Objetivos de control: estudio previo y plan de trabajo}
+Un aspecto muy importante en esta fase es la aprobación de la estructura orgánica de la unidad que tendrá la responsabilidad de la gestión y control de la base de datos, separando funciones:
+\begin{itemize}
+	\item Desarrollo de sistemas y explotación.
+	\item Explotación y control de datos.
+	\item Administración de bases de datos y desarrollo.
+\end{itemize}
+
+Para facilitar la asignación de funciones y roles se puede utilizar una \href{https://es.wikipedia.org/wiki/Matriz_de_asignaci\%C3\%B3n_de_responsabilidades}{matriz RACI}  (\textit{Responsible, Accountable, Consulted, Informed})
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivos de control: concepción y selección de equipo}
+En esta fase se comienza a diseñar la base de datos siguiendo modelos y técnicas definidos por la metodología de desarrollo de la Organización. El auditor debe, en primer lugar, analizar la metodología de diseño; y en segundo lugar, comprobar su correcta utilización. Como mínimo, esta metodología deberá contemplar aspectos físicos y lógicos.
+
+\begin{alertblock}{Advertencia}
+	¡¡Hay auditores que piensan que ciertas metodologías no existen o no son metodologías!! Ej: Extreme programming.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivos de control: diseño y carga}
+	En esta fase se llevan a cabo los diseños físico y lógico de la BD, por lo que el auditor tendrá que examinar si estos diseños se han realizado correctamente, determinando si la definición de los datos contempla, además de su estructura, las asociaciones y restricciones oportunas, así como las especificaciones de almacenamiento de datos y las cuestiones relativas a seguridad.\\~\\
+	Una vez realizado el diseño, se procederá a la carga o alimentación de la BD, planificando y probando convenientemente dichas tareas. Es aconsejable establecer controles que aseguren la integridad de los datos.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivos de control: explotación y mantenimiento}
+Terminada la fase anterior, el sistema se pondrá, mediante las correspondientes autorizaciones y siguiendo los procedimientos establecidos para ello, en explotación. Se deberá comprobar que se establecen los procedimientos de explotación y mantenimiento que aseguran que los datos se traten de forma congruente y exacta.\\~\\
+También sería conveniente que el auditor pudiera llevar a cabo una auditoría sobre el rendimiento del sistema de BD, comprobando si se han llevado a cabo los procesos de ajuste fino y optimización adecuados.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Objetivos de control: revisión posterior y procesos auxiliares}
+	La revisión post-implantación debe evaluar si:
+	\begin{itemize}
+		\item Se han conseguido los resultados esperados.
+		\item Se satisfacen las necesidades de los usuarios.
+		\item Los costes y beneficios coinciden con los previstos.
+	\end{itemize}
+
+A lo largo de todo el ciclo de vida de la BD se deberá controla la formación que precisan tanto los usuarios informáticos como no informáticos, dado que \textbf{la formación es clave para minimizar el riesgo en una implantación de base de datos}. Esta formación no debería limitarse al área de bases de datos, sino que tendría que ser complementada con formación relativa a los conceptos de control y seguridad.\\~\\
+Además, el auditor tendrá que revisar la documentación que se produce a lo largo de todo el proceso para comprobar que es suficiente y si se ajusta a los estándares establecidos por la metodología adoptada. A este respecto, resulta importante llevar a cabo un \textbf{aseguramiento de la calidad}.
+\end{frame}
+
+\section{Auditoría y control interno en un entorno SGBD}
+
+\begin{frame}
+	\frametitle{Auditoría y control interno en un entorno SGBD}
+	\begin{itemize}
+	\item SGBD: núcleo (kernel), catálogo, utilidades del administrador.
+
+	\item Monitorización y ajuste: información para optimizar el SGBD.
+	\item Sistema operativo: las interfaces entre SGBD y SO suelen ser cerradas por los fabricantes.
+	\item Paquetes de seguridad: permiten implantar una política de seguridad. A veces no se encuentra bien integrado con un SGBD.
+	\item Diccionarios de datos: se pueden auditar, puesto que son bases de metadatos. Un fallo en un diccionario de datos suele llevar consigo una pérdida de integridad de los procesos.
+	\item Herramientas CASE: soporte al diseño y concepción de SGBDs. Permiten al auditor revisar el diseño de la BD.
+	\item 4GLs: uno de los peligros más graves de los 4GL es que no se apliquen controles con el mismo rigor que a programas desarrollados en lenguajes de tercera generación.
+	\item Facilidades de usuario: determinadas hojas de cálculo permiten establecer conexiones a las bases de datos. El auditor deberá prestar especial atención a los procedimientos de carga y descarga de datos desde la BD usando paquetes ofimáticos.
+	\end{itemize}
+\end{frame}
+%------------------------------------------------
+\begin{frame}
+	\frametitle{Ejercicio 4.1}
+		Uno de los objetivos de control de COBIT relacionados con bases de datos es el del establecimiento de una política de copias de seguridad. 
+		\begin{enumerate}
+		\item Realice un volcado de la tabla actor de la BD sakila. Restáurela en otra base de datos creada al efecto.
+		\item Proponga una política de copias de seguridad para una base de datos MariaDB.
+		\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Ejercicio 4.2}
+Defina un procedimiento para la selección de SGBDs.
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Referencias}
+\footnotesize{
+\begin{thebibliography}{99} % Beamer does not support BibTeX so references must be inserted manually as below
+\bibitem[Piattini, 2008]{p1} Mario Piattini Velthuis et al. (2008)
+\newblock Auditoría de Tecnologías y Sistemas de Información.
+\end{thebibliography}
+}
+\end{frame}
+
+
+
+%------------------------------------------------
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

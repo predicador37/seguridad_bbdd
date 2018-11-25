@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{SHOW} \PYG{k}{INDEX} \PYG{k}{FROM} \PYG{n}{TABLENAME} \PYG{p}{[}\PYG{k}{table} \PYG{n}{name}\PYG{p}{]}
+\end{Verbatim}

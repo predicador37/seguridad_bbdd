@@ -1,0 +1,6 @@
+\select@language {spanish}
+\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Metodolog\IeC {\'\i }a para la auditor\IeC {\'\i }a de SGBDs}{6}{0}{2}
+\beamer@sectionintoc {3}{Recomendaciones de COBIT}{8}{0}{3}
+\beamer@sectionintoc {4}{Objetivos de control en el ciclo de vida de una base de datos}{10}{0}{4}
+\beamer@sectionintoc {5}{Auditor\IeC {\'\i }a y control interno en un entorno SGBD}{17}{0}{5}

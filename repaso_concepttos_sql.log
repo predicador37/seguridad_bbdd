@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  24 NOV 2018 10:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2018.9.30)  25 NOV 2018 10:56
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1275,37 +1275,39 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
  (./repaso_concepttos_sql.vrb) [17
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 441.
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 441.
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Try loading font information for OT1+mathkerncmss on input 
-line 441.
+line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
-)
-Overfull \hbox (3.41064pt too wide) in paragraph at lines 441--441
+))
+[18
+
+]
+Overfull \hbox (3.41064pt too wide) in paragraph at lines 456--456
  [] 
  []
 
 
-Overfull \vbox (7.75421pt too high) detected at line 441
+Overfull \vbox (7.75421pt too high) detected at line 456
  []
 
-[18
-
-]
-\openout4 = `repaso_concepttos_sql.vrb'.
-
- (./repaso_concepttos_sql.vrb) [19
+[19
 
 ]
 \openout4 = `repaso_concepttos_sql.vrb'.
@@ -1315,12 +1317,99 @@ Overfull \vbox (7.75421pt too high) detected at line 441
 ]
 \openout4 = `repaso_concepttos_sql.vrb'.
 
+ (./repaso_concepttos_sql.vrb) [21
 
-(./repaso_concepttos_sql.vrb) [21
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
 
-] [22
 
-] [23
+(./repaso_concepttos_sql.vrb
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/1981A7FE4FFA1AF37A0123EF899FF626D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)) [22
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [23
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/409DE8DB49E933A13DD8D8296CEFC208D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/676FC161DD066D3E455F3307CA113F21D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/E02A3634A3B850BE5A5C4DB0B7750655D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)
+\openout7 = `repaso_concepttos_sql.pyg'.
+
+
+(./_minted-repaso_concepttos_sql/0E3D76E33B0F18CD01E630D613171C06D121BF06A9B6FA
+6CCF6B626BE355BD3E.pygtex)) [24
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb) [25
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+
+(./repaso_concepttos_sql.vrb
+Overfull \hbox (0.43762pt too wide) detected at line 7
+ []\OT1/cmss/m/n/7 10 
+ []
+
+
+Overfull \hbox (0.43762pt too wide) detected at line 8
+ []\OT1/cmss/m/n/7 11 
+ []
+
+) [26
+
+]
+\openout4 = `repaso_concepttos_sql.vrb'.
+
+ (./repaso_concepttos_sql.vrb
+Overfull \hbox (0.43762pt too wide) detected at line 4
+ []\OT1/cmss/m/n/7 12 
+ []
+
+
+Overfull \hbox (0.43762pt too wide) detected at line 5
+ []\OT1/cmss/m/n/7 13 
+ []
+
+
+Overfull \hbox (0.43762pt too wide) detected at line 6
+ []\OT1/cmss/m/n/7 14 
+ []
+
+
+Overfull \hbox (0.43762pt too wide) detected at line 7
+ []\OT1/cmss/m/n/7 15 
+ []
+
+) [27
+
+] [28
+
+] [29
 
  </usr/share/texlive/texmf-dist/tex/latex/beamer/art/beamericonarticle.pdf>]
 \tf@nav=\write9
@@ -1332,14 +1421,14 @@ Overfull \vbox (7.75421pt too high) detected at line 441
 \tf@snm=\write11
 \openout11 = `repaso_concepttos_sql.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 517.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 517.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 622.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 622.
  (./repaso_concepttos_sql.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 517.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 517.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 622.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 622.
 Package rerunfilecheck Info: File `repaso_concepttos_sql.out' has not changed.
 (rerunfilecheck)             Checksum: 7413B92A1F62D74313E5DEEFAA59045C;187.
 
@@ -1351,10 +1440,10 @@ runsystem(rm repaso_concepttos_sql.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 22879 strings out of 493013
- 449388 string characters out of 6135682
- 576094 words of memory out of 5000000
- 25756 multiletter control sequences out of 15000+600000
+ 22965 strings out of 493013
+ 453706 string characters out of 6135682
+ 576459 words of memory out of 5000000
+ 25803 multiletter control sequences out of 15000+600000
  9852 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,15n,69p,787b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1367,10 +1456,10 @@ st/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmtt9.pfb>
-Output written on repaso_concepttos_sql.pdf (23 pages, 162382 bytes).
+Output written on repaso_concepttos_sql.pdf (29 pages, 178661 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 632 compressed objects within 7 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 836 PDF objects out of 1000 (max. 8388607)
+ 779 compressed objects within 8 object streams
+ 65 named destinations out of 1000 (max. 500000)
  75 words of extra memory for PDF output out of 10000 (max. 10000000)
 
