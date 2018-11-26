@@ -385,7 +385,7 @@ Un SGBD es un paquete de software utilizado para definir, crear, utilizar y mant
 	
 	\end{itemize}
 
-En las siguientes secciones se revisarán estos mecanismos a través de un caso de uso: MariaDB.
+En las siguientes secciones se revisarán estos mecanismos a través de un caso de uso: \href{https://mariadb.org/}{MariaDB}, un clon de MySQL.
 	
 \end{frame}
 
@@ -394,8 +394,7 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 
 \begin{frame}
 	\frametitle{Ejercicio 2.2: instalación de un SGBD}
-	Para poder realizar este y otros ejercicios, será necesario disponer de una instancia de base de datos de pruebas. En este caso, se instalará MariaDB. MariaDB es un clon de MySQL, un SGBD opensource muy popular en la industria que puede descargarse de forma gratuita desde su web. \\~\\
-	
+	Para poder realizar este y otros ejercicios, será necesario disponer de una instancia de base de datos de pruebas. En este caso, se instalará MariaDB. MariaDB es un clon de MySQL, un SGBD opensource muy popular en la industria que puede descargarse de forma gratuita desde su web.\\~\\
 	Para este ejercicio, se utilizará \href{https://www.vagrantup.com/downloads.html}{Vagrant} para desplegar una VM con MariaDB. Se trata de una herramienta que permite la creación y configuración de entornos de desarrollo ligeros, reproducibles y portables.
 	
 	\begin{block}{¿Qué es Vagrant en realidad?}
@@ -458,7 +457,7 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.2: instalación de un SGBD}
-	Para instalar MariaDB:
+	Para \href{https://downloads.mariadb.org/mariadb/repositories/#mirror=tedeco}{instalar MariaDB}:
 		\begin{exampleblock}{Instalación de MariaDB en Ubuntu}
 			\begin{verbatim}
 			sudo apt-get install software-properties-common
@@ -471,49 +470,27 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 			sudo apt-get install mariadb-server
 			\end{verbatim}
 		\end{exampleblock}
-	
+		Durante el proceso de instalación, se solicitará una contraseña para el usuario \textbf{root}.
 \end{frame}
 
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.2: instalación de un SGBD}
-	Durante el proceso de instalación, se solicitará una contraseña para el usuario root.
+
 	
-	\begin{itemize}
-		\item Arrancar la máquina de vagrant ejecutando desde la shell en el directorio donde reside el Vagrantfile:
-		\begin{exampleblock}{Arranque de la VM con Ubuntu}
-			\begin{verbatim}
-			vagrant up
-			vagrant ssh
-			sudo apt-get update # una vez iniciada sesión
-			sudo apt-get install mariadb-server
-			\end{verbatim}
-		\end{exampleblock}
-	\end{itemize}
-	\begin{alertblock}{Importante: sobre Vagrant}
-		\begin{itemize}
-			\item 	La contraseña de superusuario es \textbf{vagrant}
-			\item 	El directorio donde se ubica el \textit{Vagrantfile} se comparte en la VM invitada (\textit{guest}) en \textbf{/vagrant/}
-		\end{itemize}
-	\end{alertblock}
-\end{frame}
-
-
-\begin{frame}[fragile]
-	\frametitle{Ejercicio 2.2: instalación de un SGBD}
 	Para comprobar que la instalación es correcta:
-	\begin{exampleblock}{Arranque de la VM con Ubuntu}
-		\begin{verbatim}
-		# verificar que la BD escucha en el puerto correspondiente
-		netstat -anp | grep 3306 
-		# iniciar sesión con el usuario root
-		mysql -u root -p
-		# mostrar los schemas existentes
-		show databases
-		\end{verbatim}
-	\end{exampleblock}
-	
+\begin{exampleblock}{Arranque de la VM con Ubuntu}
+	\begin{verbatim}
+	# verificar que la BD escucha en el puerto correspondiente
+	netstat -anp | grep 3306 
+	# iniciar sesión con el usuario root
+	mysql -u root -p
+	# mostrar los schemas existentes
+	show databases
+	\end{verbatim}
+\end{exampleblock}
 \end{frame}
+
 
 \begin{frame}[fragile]
 	\frametitle{¿qué contraseña habéis puesto?}
@@ -552,8 +529,8 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 
 \begin{frame}[fragile]
 	\frametitle{Seguridad en MariaDB: roles y encriptación}
-	La versión 10.0 ya introdujo los \textbf{roles de usuario}, funcionalidad que ha sido mejorada en la versión 10.1. Los DBAs pueden empaquetar un conjunto de privilegios y asociarlos a un rol, pudiendo conceder un rol y sus privilegios asociados a uno o varios usuarios. Asimismo, se puede asignar un rol por defecto a cada usuario creado.\\~\\
-	Por último, el \textbf{soporte para encriptación} es quizá el aspecto relacionado con la seguridad de la información más interesante de la versión 10.1. Permite encriptar \textit{tablespaces}, tablas y logs. 
+	La versión 10.0 ya introdujo los \href{https://mariadb.com/kb/en/library/roles_overview/}{roles de usuario}, funcionalidad que ha sido mejorada en la versión 10.1. Los DBAs pueden empaquetar un conjunto de privilegios y asociarlos a un rol, pudiendo conceder un rol y sus privilegios asociados a uno o varios usuarios. Asimismo, se puede asignar un rol por defecto a cada usuario creado.\\~\\
+	Por último, el \href{https://mariadb.com/kb/en/library/encryption/}{soporte para encriptación} es quizá el aspecto relacionado con la seguridad de la información más interesante de la versión 10.1. Permite encriptar \textit{tablespaces}, tablas y logs. 
 	
 \end{frame}
 
@@ -578,7 +555,7 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 \begin{frame}[fragile]
 	\frametitle{Securización de MariaDB: opciones mysqld}
 	\begin{itemize}
-		\item \mintinline{bash}{--local-infile=0}: hará que el comando \mintinline{sql}{LOAD DATA LOCAL} falle. Este comando carga un archivo de texto en una tabla con gran rapidez; LOCAL hace que el archivo se lea en el cliente.
+		\item \mintinline{bash}{--local-infile=0}: hará que el comando \mintinline{sql}{LOAD DATA LOCAL} falle. Este comando carga un archivo de texto en una tabla con gran rapidez; \mintinline{sql}{LOCAL} hace que el archivo se lea en el cliente.
 		\item \mintinline{bash}{--safe-show-database}: sustituido en MariaDB 5.5 por el privilegio \mintinline{sql}{SHOW DATABASES}. Permite al usuario listar las bases de datos existentes.
 		\item \mintinline{bash}{--safe-user-create}: impide la creación de nuevos usuarios por un usuario que no tiene privilegios de escritura en la tabla \mintinline{sql}{mysql.user}
 		\item \mintinline{bash}{--secure-auth}: impide la autenticación con cuentas que tengan contraseñas en formato anterior a MySQL 4.1.
@@ -606,15 +583,15 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.3: securizar MariaDB}
-	\mintinline{bash}{mysql_secure_installation} es un shell script disponible para sistemas Unix que permite mejorar la seguridad de una instalación de MariaDB de las siguientes formas:
+	\mintinline{bash}{mysql_secure_installation} es un \textit{shell script} disponible para sistemas Unix que permite mejorar la seguridad de una instalación de MariaDB de las siguientes formas:
 	\begin{itemize}
-		\item Asignando una contraseña a las cuentas de root.
-		\item Eliminando cuentas de root con acceso desde fuera del host local.
+		\item Asignando una contraseña a las cuentas de \textit{root}.
+		\item Eliminando cuentas de \textit{root} con acceso desde fuera del host local.
 		\item Eliminando cuentas de usuarios anónimos
-		\item Eliminando la base de datos de test, que puede ser accedida por defecto por usuarios anónimos
+		\item Eliminando la base de datos de \textit{test}, que puede ser accedida por defecto por usuarios anónimos
 	\end{itemize}
 
-Ejecute el script y responda a las preguntas interactivamente. Por otra parte, compruebe qué usuario del sistema operativo está ejecutando el proceso \mintinline{bash}{mysqld}. ¿Lo considera seguro?
+Ejecute el \textit{script} y responda a las preguntas interactivamente. Por otra parte, compruebe qué usuario del sistema operativo está ejecutando el proceso \mintinline{bash}{mysqld}. ¿Lo considera seguro?
 	
 \end{frame}
 
@@ -623,7 +600,7 @@ Ejecute el script y responda a las preguntas interactivamente. Por otra parte, c
 \begin{frame}[fragile]
 	\frametitle{Conexiones seguras en MariaDB}
 Por defecto, MariaDB transmite los datos en claro entre el servidor y los clientes. Esto puede ser aceptable si el servidor y el cliente se ejecutan en la misma máquina, pero no lo es cuando no se da esta circunstancia.\\~\\
-Para mitigar este problema, MariaDB permite encriptar los datos entre el cliente y el servidor usando TLS (Transpor Layer Security).
+Para mitigar este problema, MariaDB \href{https://mariadb.com/kb/en/library/secure-connections/}{permite encriptar los datos entre el cliente y el servidor usando TLS} (\textit{Transport Layer Security}).
 
 \begin{exampleblock}{Comprobar soporte para TLS}
 	\begin{verbatim}
@@ -760,18 +737,18 @@ Si el valor de \mintinline{bash}{have_ssl} es DISABLED implica que el SGBD tiene
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.5: conexión segura desde Python}
-	Crear un pequeño script en Python que, usando el paquete \mintinline{python}{MySQLdb}, utilice los certificados de cliente para conectarse a la base de datos y ejecutar el comando \mintinline{sql}{"SHOW STATUS LIKE 'Ssl_cipher'"}, cuyo resultado deberá mostrar por consola.
+	Crear un pequeño \textit{script} en \textit{Python} que, usando el paquete \mintinline{python}{MySQLdb}, utilice los certificados de cliente para conectarse a la base de datos y ejecutar el comando \mintinline{sql}{"SHOW STATUS LIKE 'Ssl_cipher'"}, cuyo resultado deberá mostrar por consola.
 \end{frame}
 
 \subsection{Encriptado de tablas y tablespaces}
 
 \begin{frame}[fragile]
 	\frametitle{Data at Rest Encryption}
-	También conocida como "Transparent Data Encryption", esta tecnología permite encriptar los datos de las tablas almacenadas en disco. Está soportada en varios motores de almacenamiento (XtraDB, InnoDB, Aria). Entre sus limitaciones:
+	También conocida como \textit{"Transparent Data Encryption"}, esta tecnología permite encriptar los datos de las tablas almacenadas en disco. Está soportada en varios motores de almacenamiento (\textit{XtraDB, InnoDB, Aria}). Entre sus limitaciones:
 	
 	\begin{itemize}
 		\item No se encriptan metadatos ni datos enviados al cliente.
-		\item El log de error no se encripta.
+		\item El \textit{log} de error no se encripta.
 		\item El complemento de auditoría no puede generar salida encriptada.
 	\end{itemize}
 
@@ -781,7 +758,7 @@ El encriptado ocurre al escribir páginas a disco. También es posible encriptar a
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.6: Encriptación de tabla (1/6)}
-	Se va a proceder a encriptar una tabla con la funcionalidad de Data Rest Encryption de MariaDB. En primer lugar, será necesario habilitar el File Key Management Plugin. Para ello, habrá que preparar un archivo con las claves. Con el usuario root:
+	Se va a proceder a encriptar una tabla con la funcionalidad de \href{https://mariadb.com/kb/en/library/data-at-rest-encryption/}{Data Rest Encryption} de MariaDB. En primer lugar, será necesario habilitar el \href{https://mariadb.com/kb/en/library/encryption-key-management/#file-key-management-plugin}{File Key Management Plugin}. Para ello, habrá que preparar un archivo con las claves. Con el usuario \textbf{root}:
 	\begin{exampleblock}{Archivo de claves}
 		\begin{verbatim}
 		# openssl rand -hex 16 >> /etc/mysql/keys
@@ -816,13 +793,13 @@ A continuación, se deberá encriptar el archivo:
 		-in /etc/mysql/keys -out /etc/mysql/keys.enc
 		\end{verbatim}
 	\end{exampleblock}
-En donde mi\_password será un password robusto a elegir por el alumno. Una vez terminado, se puede borrar el archivo de claves en texto plano.
+En donde \textit{mi\_password} será un \textit{password} robusto a elegir por el alumno. Una vez terminado, se puede borrar el archivo de claves en texto plano.
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.6: Encriptación de tabla (4/6)}
 	
-Una vez preparados los distintos archivos, se puede configurar MariaDB para usar el  File Key Management Plugin. Para ello, modificar el archivo de configuración /etc/my.cnf
+Una vez preparados los distintos archivos, se puede configurar MariaDB para usar el  \textit{File Key Management Plugin}. Para ello, modificar el archivo de configuración \mintinline{bash}{/etc/my.cnf}
 	\begin{exampleblock}{Configuración del plugin}
 		\begin{verbatim}
 		[mysqld]
@@ -834,7 +811,7 @@ Una vez preparados los distintos archivos, se puede configurar MariaDB para usar
 		file_key_management_encryption_algorithm = aes_cbc
 		\end{verbatim}
 	\end{exampleblock}
-	Una vez modificada la configuración, reiniciar el servidor MariaDB. El archivo .key contendrá el password utilizado para encriptar el archivo de claves. \textbf{¡Cuidado con los permisos!}
+	Una vez modificada la configuración, reiniciar el servidor MariaDB. El archivo \mintinline{bash}{.key} contendrá el \textit{password} utilizado para encriptar el archivo de claves. \textbf{¡Cuidado con los permisos!}
 \end{frame}
 
 \begin{frame}[fragile]
@@ -860,7 +837,7 @@ Comprobar que el plugin está activado iniciando sesión con el usuario root en Ma
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.6: Encriptación de tabla (6/6)}
 	
-¿Cómo comprobar en el sistema de archivos que los datos de la tabla han sido, en efecto, encriptados? Utilice la tabla staff y el usuario 'Mike' para probarlo.
+¿Cómo comprobar en el sistema de archivos que los datos de la tabla han sido, en efecto, encriptados? Utilice la tabla staff y el nombre \textit{'Mike'} para probarlo.
 \end{frame}
 
 \begin{frame}[fragile]
@@ -879,15 +856,15 @@ Comprobar que el plugin está activado iniciando sesión con el usuario root en Ma
 
 \begin{frame}
 	\frametitle{Auditoría}
-	MariaDB presenta un complemento o plugin de auditoría cuyo propósito fundamental es garantizar la trazabilidad de la actividad del servidor. Almacena quién se conecta al servidor (nombre y host), que consultas se lanzan, qué tablas se consultan y qué variables se cambian. Esta información se almacena en un archivo de log rotatorio o puede ser enviada al syslogd local.\\~\\
-	Para instalar el plugin, iniciar sesión como root y ejecutar el comando \mintinline{sql}{SHOW GLOBAL VARIABLES LIKE 'plugin_dir';}, que mostrará la ruta en la que se almacenan los plugins. A continuación, se puede comprobar la existencia en dicho directorio del fichero server\_audit.so.
+	MariaDB presenta un complemento o \textit{plugin} de auditoría cuyo propósito fundamental es garantizar la trazabilidad de la actividad del servidor. Almacena quién se conecta al servidor (nombre y \textit{host}), que consultas se lanzan, qué tablas se consultan y qué variables se cambian. Esta información se almacena en un archivo de \textit{log} rotatorio o puede ser enviada al \textit{syslogd} local.\\~\\
+	Para instalar el \textit{plugin}, iniciar sesión como \textbf{root} y ejecutar el comando \mintinline{sql}{SHOW GLOBAL VARIABLES LIKE 'plugin_dir';}, que mostrará la ruta en la que se almacenan los plugins. A continuación, se puede comprobar la existencia en dicho directorio del fichero \mintinline{bash}{server\_audit.so}.
 	
 \end{frame}
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 2.7: instalación del plugin server\_audit}
 	\setbeamerfont{block body example}{size=\footnotesize}
-	Para instalar el plugin, iniciar sesión como root y ejecutar, como usuario root en MariaDB:
+	Para instalar el \textit{plugin}, iniciar sesión como \textbf{root} y ejecutar:
 \begin{exampleblock}{Activación del plugin server audit}
 	\begin{verbatim}
 INSTALL SONAME 'server_audit';
@@ -897,7 +874,7 @@ SET GLOBAL server_audit_logging=ON;
 	\end{verbatim}
 \end{exampleblock}
 
-El plugin tan solo tiene tres tipos de eventos a registrar. Para comprobar su funcionamiento, se puede hacer un seguimiento al fichero generado mientras se realizan consultas y operaciones en la BD con distintos usuarios:
+El \textit{plugin} tan solo tiene tres tipos de eventos a registrar. Para comprobar su funcionamiento, se puede hacer un seguimiento al fichero generado mientras se realizan consultas y operaciones en la BD con distintos usuarios:
 \begin{exampleblock}{Comprobación de la trazabilidad}
 	\begin{verbatim}
 # tail /var/lib/mysql/server_audit.log
@@ -917,7 +894,7 @@ El plugin tan solo tiene tres tipos de eventos a registrar. Para comprobar su fu
 		\item Distorsión: se añade ruido a los valores reales.
 		\item Generalización: por ejemplo, no utilizar direcciones completas sino sólo a nivel de localidad.
 	\end{itemize}
-MariaDB no presenta funcionalidades de anonimización de forma nativa, pero ofrece otro producto: MaxScale, un proxy inteligente que hace forwarding de sentencias SQL a distintos SGBDs y que sí dispone de funcionalidades de enmascarado.
+MariaDB no presenta funcionalidades de anonimización de forma nativa, pero ofrece otro producto: \textit{MaxScale}, un \textit{proxy} o pasarela inteligente que hace \textit{forwarding} o reenvío de sentencias SQL a distintos SGBDs y que sí dispone de funcionalidades de enmascarado.
 \end{frame}
 
 %------------------------------------------------

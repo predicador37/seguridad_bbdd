@@ -160,12 +160,12 @@ Universidad de Cantabria \\ % Your institution for the title page
 \frametitle{Contexto}
 Hoy en día, las bases de datos dan soporte al almacenamiento de todo tipo de información sensible y crítica: cuentas bancarias, balances, datos fiscales, informes médicos, registros sobre empleo, compras con tarjetas de crédito, expedientes académicos...\\~\\
 
-Sin embargo, la seguridad en bases de datos ha sido muchas veces un aspecto al que no se le ha dedicado la atención suficiente. Con la aparición de normas como el Esquema Nacional de Seguridad o la ISO 27001 y la necesidad cada vez mayor de responder ante clientes y usuarios el escenario está cambiando y se está volviendo a poner el foco en la relevancia de estas cuestiones.
+Sin embargo, la seguridad en bases de datos ha sido muchas veces un aspecto al que \textbf{no se le ha dedicado la atención suficiente}. Con la aparición de normas como el Esquema Nacional de Seguridad o la ISO 27001 y la necesidad cada vez mayor de responder ante clientes y usuarios el escenario está cambiando y se está volviendo a poner el foco en la relevancia de estas cuestiones.
 \end{frame}
 
 \begin{frame}
 	\frametitle{Contexto}
-	La mayor parte de las veces, la seguridad en una base de datos consiste en aplicar los principios ya probados y utilizados en el ámbito de las redes de comunicaciones durante décadas: \\~\\
+	La mayor parte de las veces, la seguridad en una base de datos consiste en aplicar los \textbf{principios ya probados} y utilizados en el ámbito de las redes de comunicaciones durante décadas: \\~\\
 	
 \begin{itemize}
 	\item Filosofía del mínimo privilegio.
@@ -237,7 +237,7 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 		\item Realizar un análisis de riesgos
 		\item Revisar medidas de seguridad a la luz del AR
 		\item Establecer mecanismos y procedimientos de notificación de quiebras de seguridad
-		\item A partir del AR, realizar, en su caso, una evaluación de impacto en la protección de datos
+		\item A partir del AR, realizar, en su caso, una \href{https://www.aepd.es/media/guias/guia-evaluaciones-de-impacto-rgpd.pdf}{evaluación de impacto} en la protección de datos
 	
 		\end{itemize}
 
@@ -329,7 +329,7 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 	\begin{itemize}
 		\item Los datos tienen que estar disponibles el tiempo que sea necesario.
 		\item Los datos tienen que estar disponibles tan sólo para los usuarios apropiados.
-		\item Debe de ser posible auditar quién ha accedido a qué datos.
+	
 	\end{itemize}
 \begin{exampleblock}{Ejemplos de no disponibilidad}
 	\begin{itemize}
@@ -344,7 +344,6 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 	
 	\begin{itemize}
 		\item Es necesario verificar que cualquier dato de entrada es preciso y verificable, correcto y libre de modificaciones y/o errores.
-		\item Debe existir un mecanismo que informe de cualquier cambio en los datos así como su autoría, para garantizar el cumplimiento de las reglas de negocio y la normativa de protección de datos.
 		\item Deben existir mecanismos que eviten que los datos sean adulterados o corrompidos.
 	\end{itemize}
 \begin{exampleblock}{Ejemplos de ataques contra la integridad}
@@ -360,7 +359,6 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 	
 	\begin{itemize}
 		\item Hay que asegurar que los datos confidenciales solo están a disposición de determinados usuarios autorizados.
-		\item Es necesario informar de quién ha accedido a qué datos y qué se ha hecho con ellos.
 		\item Deben existir mecanismos que impidan la extracción y revelación no autorizada de datos.
 		\item Han de asegurarse los datos frente a posibles brechas de seguridad internas o externas.
 	\end{itemize}
@@ -387,6 +385,22 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 		\item Uso de un usuario y una contraseña de un compañero de trabajo.
 	\end{itemize}
 \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Trazabilidad}
+	
+	\begin{itemize}
+		\item Debe de ser posible auditar quién ha accedido a qué datos.
+		\item Debe existir un mecanismo que informe de cualquier cambio en los datos así como su autoría, para garantizar el cumplimiento de las reglas de negocio y la normativa de protección de datos.
+		\item Es necesario informar de qué se ha hecho con ellos.
+	\end{itemize}
+	\begin{exampleblock}{Ejemplos de falta de trazabilidad}
+		\begin{itemize}
+			\item No saber qué operador ha hecho la última operación de mantenimiento en una base de datos.
+			\item No saber qué usuario ha borrado una tabla de una base de datos en un momento dado.
+		\end{itemize}
+	\end{exampleblock}
 \end{frame}
 
 \begin{frame}
@@ -452,7 +466,7 @@ El Reglamento General de Protección de Datos (RGPD), de \textbf{obligado cumplim
 
 \begin{frame}
 	\frametitle{Mal diseño de privilegios de acceso}
-	Muchas veces, por error o debido a políticas de acceso pobres, los privilegios otorgados a un usuario sobre la base de datos exceden los requisitos de su puesto de trabajo. También pueden permanecer sin modificar en el caso de que un trabajador cambie de rol o sea baja en la organización.
+	Muchas veces, por error o debido a políticas de acceso pobres, los privilegios otorgados a un usuario sobre la base de datos \textbf{exceden los requisitos de su puesto de trabajo}. También pueden permanecer sin modificar en el caso de que un trabajador cambie de rol o sea baja en la organización.
 	Para evitar este tipo de situaciones, se dan dos recomendaciones:
 	\begin{itemize}
 		\item Diseñar una política de concesión de privilegios de acceso ajustada a los roles necesarios en la organización.
@@ -618,8 +632,8 @@ Indique si está afectado por la vulnerabilidad de inyección SQL y, de ser así, p
 			\item Asegurarse de que sólo pueden conectarse a los SGBD hosts de confianza.
 			\item Implementar algún tipo de IPS/IDS.
 	\end{itemize}
-\begin{block}{Fallos autenticados}
-	Hay bastante menos bugs en esta categoría. La mejor protección contra fallos autenticados en protocolos de red es disponer de una política de contraseñas robusta.
+\begin{block}{Fallos autenticados en protocolos de red}
+	Hay bastante menos bugs en esta categoría. La mejor protección contra este tipo de fallos es disponer de una política de contraseñas robusta.
 \end{block}
 \end{frame}
 \begin{frame}

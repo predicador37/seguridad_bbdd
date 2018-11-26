@@ -5,9 +5,9 @@
 \beamer@sectionintoc {4}{Seguridad en SGBDs}{21}{0}{4}
 \beamer@sectionintoc {5}{Caso de uso: MySQL}{23}{0}{5}
 \beamer@subsectionintoc {5}{1}{Instalaci\'on}{24}{0}{5}
-\beamer@subsectionintoc {5}{2}{Seguridad}{33}{0}{5}
-\beamer@subsectionintoc {5}{3}{Securizaci\'on}{37}{0}{5}
-\beamer@subsectionintoc {5}{4}{Conexiones seguras}{42}{0}{5}
-\beamer@subsectionintoc {5}{5}{Encriptado de tablas y tablespaces}{51}{0}{5}
-\beamer@subsectionintoc {5}{6}{Auditor\IeC {\'\i }a}{60}{0}{5}
-\beamer@subsectionintoc {5}{7}{Anonimizaci\'on y enmascarado}{63}{0}{5}
+\beamer@subsectionintoc {5}{2}{Seguridad}{32}{0}{5}
+\beamer@subsectionintoc {5}{3}{Securizaci\'on}{36}{0}{5}
+\beamer@subsectionintoc {5}{4}{Conexiones seguras}{41}{0}{5}
+\beamer@subsectionintoc {5}{5}{Encriptado de tablas y tablespaces}{50}{0}{5}
+\beamer@subsectionintoc {5}{6}{Auditor\IeC {\'\i }a}{59}{0}{5}
+\beamer@subsectionintoc {5}{7}{Anonimizaci\'on y enmascarado}{62}{0}{5}
