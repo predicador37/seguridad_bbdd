@@ -1,5 +1,0 @@
-\select@language {spanish}
-\beamer@sectionintoc {1}{Definici\'on}{3}{0}{1}
-\beamer@sectionintoc {2}{SQL b\'asico}{5}{0}{2}
-\beamer@sectionintoc {3}{Vistas}{16}{0}{3}
-\beamer@sectionintoc {4}{Privilegios SQL}{20}{0}{4}

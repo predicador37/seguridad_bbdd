@@ -1,6 +1,0 @@
-\select@language {spanish}
-\beamer@sectionintoc {1}{Introducci\'on}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Contexto}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Normativa aplicable}{9}{0}{1}
-\beamer@subsectionintoc {1}{3}{Dimensiones de la seguridad TI}{16}{0}{1}
-\beamer@subsectionintoc {1}{4}{Principales problemas de seguridad en BBDD}{25}{0}{1}

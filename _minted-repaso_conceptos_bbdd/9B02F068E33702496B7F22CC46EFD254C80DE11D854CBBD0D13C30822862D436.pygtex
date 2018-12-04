@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{l+s+ss}{\PYGZdq{}SHOW STATUS LIKE \PYGZsq{}Ssl\PYGZus{}cipher\PYGZsq{}\PYGZdq{}}
-\end{Verbatim}

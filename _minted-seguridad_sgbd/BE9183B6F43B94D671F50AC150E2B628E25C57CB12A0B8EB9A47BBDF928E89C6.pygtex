@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{SHOW} \PYG{k}{GLOBAL} \PYG{n}{VARIABLES} \PYG{k}{LIKE} \PYG{l+s+s1}{\PYGZsq{}plugin\PYGZus{}dir\PYGZsq{}}\PYG{p}{;}
-\end{Verbatim}
