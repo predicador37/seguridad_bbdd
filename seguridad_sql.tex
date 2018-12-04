@@ -157,7 +157,7 @@
 \begin{frame}
 \frametitle{Definición}
 
-Structured Query Language, o SQL, es el lenguaje utilizado tanto para la definición como para la manipulación de datos en los SGBD relacionales. Se trata de uno de los lenguajes de bases de datos más populares y en uso en la industria. Entre sus características se pueden destacar:
+\textit{Structured Query Language}, o SQL, es el lenguaje utilizado \textbf{tanto para la definición como para la manipulación de datos} en los SGBD relacionales. Se trata de uno de los lenguajes de bases de datos más populares y en uso en la industria. Entre sus características se pueden destacar:
 \begin{itemize}
 	\item Presente desde 1986, la versión más reciente del estándar ISO es SQL:2016.
 	\item Cada proveedor implementa su dialecto particular, si bien el núcleo del estándar es soportado por todos.
@@ -352,7 +352,7 @@ Asegúrese de que la combinación de columnas id y cautonoma\textunderscore id es 
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 3.2}
-	En primer lugar, será necesario descargar la base de datos sakila en el directorio \/home\/vagrant, por ejemplo,  y descomprimirla:
+	En primer lugar, será necesario descargar la base de datos sakila en el directorio \mintinline{text}{\home\vagrant}, por ejemplo,  y descomprimirla:
 	\mintinline{bash}{wget http://downloads.mysql.com/docs/sakila-db.zip}
 	\mintinline{bash}{unzip http://downloads.mysql.com/docs/sakila-db.zip}
 	
@@ -416,7 +416,10 @@ Asegúrese de que la combinación de columnas id y cautonoma\textunderscore id es 
 
 \begin{frame}[fragile]
 	\frametitle{Ejercicio 3.3}
- Liste el "top five" de géneros en ingresos brutos en orden descendente.  genres in gross revenue in descending order. (Pista: puede necesitar las tablas \textit{category, film\_category, inventory, payment y rental}). \\~\\
+ Liste el "top five" de géneros en ingresos brutos en orden descendente.  genres in gross revenue in descending order. 
+ \begin{alertblock}{Atención}
+ 	Puede necesitar las tablas \textit{category, film\_category, inventory, payment y rental}
+ \end{alertblock}
  
  En su nuevo puesto de ejecutivo, le gustaría disponer de una forma sencilla de consultar este "top five". Utilice la consulta anterior para crear una vista que satisfaga esta necesidad.
  
@@ -440,8 +443,8 @@ Un privilegio se corresponde con un derecho a hacer uso de ciertas sentencias SQ
 	\frametitle{Privilegios SQL: Cuentas de usuario}
 	Las cuentas de usuario en MariaDB consisten en un usuario y un nombre de host. Esto permite crear cuentas de usuario con el mismo nombre que puedan conectarse desde diferentes hosts. Las reglas a utilizar son las siguientes:
 	\begin{itemize}
-		\item La sintaxis es: 'username'@'hostname'
-		\item Una cuenta para un único usuario puede definirse así: 'username'@'\%'.
+		\item La sintaxis es: \mintinline{sql}{'username'@'hostname'}
+		\item Una cuenta para un único usuario puede definirse así: \mintinline{sql}{'username'@'%'}.
 		\item No es necesario entrecomillar el usuario y el host si no contienen caracteres especiales (como guiones).
 		\item Para entrecomillar, pueden usarse backticks, comillas simples o comillas dobles.
 		\item Si se entrecomilla usuario y host, deben hacerse de forma separada e independiente.
@@ -617,7 +620,11 @@ Los roles se crean con la sentencia \mintinline{sql}{CREATE ROLE} y se eliminan 
 %------------------------------------------------
 \begin{frame}
 	\frametitle{Resumen}
-		
+		\begin{itemize}
+			\item SQL es un lenguaje declarativo que permite consultar y modificar la estructura de una base de datos relacional.
+			\item Entre sus características más orientadas a garantizar la seguridad de la información se encuentran la posibilidad de crear vistas, otorgar privilegios de usuario y asignar roles.
+			\item Una cuestión esencial para asegurar una base de datos relacional es disponer de una política de gestión de usuarios, roles y privilegios robusta y sometida a revisión periódica.
+			\end{itemize}
 \end{frame}
 %------------------------------------------------
 
