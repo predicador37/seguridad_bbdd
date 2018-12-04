@@ -515,7 +515,7 @@ En las siguientes secciones se revisarán estos mecanismos a través de un caso de
 \begin{frame}[fragile]
 	\frametitle{Seguridad en MariaDB: contraseñas}
 	MariaDB 10.1 introduce una API de validación de contraseñas (ver \href{https://mariadb.com/kb/en/library/password-validation/}{Password Validation Plugin API}). Esto permite crear validadores de contraseñas personalizados así como implementar autenticación de dos factores (por ejemplo, con \textit{Google Authenticator}).\\~\\
-	Esta versión también ofrece extensiones listas para usar, como \mintinline{bash}{simple_password_check}, para el establecimiento de políticas de contraseñas, o \href{https://github.com/cracklib/cracklib}{cracklib{\_}password{\_}check}, que comprueba la robustez de la contraseña según la biblioteca \textit{CrackLib}.
+	Esta versión también ofrece extensiones listas para usar, como \href{https://mariadb.com/kb/en/library/plugins-password-validation/}{\mintinline{bash}{simple_password_check}}, para el establecimiento de políticas de contraseñas, o \href{https://github.com/cracklib/cracklib}{cracklib{\_}password{\_}check}, que comprueba la robustez de la contraseña según la biblioteca \textit{CrackLib}.
 	
 \end{frame}
 
@@ -857,7 +857,7 @@ Comprobar que el plugin está activado iniciando sesión con el usuario root en Ma
 \begin{frame}
 	\frametitle{Auditoría}
 	MariaDB presenta un complemento o \textit{plugin} de auditoría cuyo propósito fundamental es garantizar la trazabilidad de la actividad del servidor. Almacena quién se conecta al servidor (nombre y \textit{host}), que consultas se lanzan, qué tablas se consultan y qué variables se cambian. Esta información se almacena en un archivo de \textit{log} rotatorio o puede ser enviada al \textit{syslogd} local.\\~\\
-	Para instalar el \textit{plugin}, iniciar sesión como \textbf{root} y ejecutar el comando \mintinline{sql}{SHOW GLOBAL VARIABLES LIKE 'plugin_dir';}, que mostrará la ruta en la que se almacenan los plugins. A continuación, se puede comprobar la existencia en dicho directorio del fichero \mintinline{bash}{server\_audit.so}.
+	Para instalar el \textit{plugin}, iniciar sesión como \textbf{root} y ejecutar el comando \mintinline{sql}{SHOW GLOBAL VARIABLES LIKE 'plugin_dir';}, que mostrará la ruta en la que se almacenan los plugins. A continuación, se puede comprobar la existencia en dicho directorio del fichero \mintinline{bash}{server_audit.so}.
 	
 \end{frame}
 
